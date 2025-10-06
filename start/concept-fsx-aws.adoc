@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: start/concept-fsx-aws.html 
+keywords: Amazon FSx for NetApp ONTAP, volumes, aws, access key, secret key, cloud manager, NetApp Console, bluexp 
+summary: Amazon FSx for NetApp ONTAP 은 고객이 NetApp의 ONTAP 스토리지 운영 체제로 구동되는 파일 시스템을 시작하고 실행할 수 있도록 하는 완전 관리형 서비스입니다. 
+---
+= Amazon FSx for NetApp ONTAP 에 대해 알아보세요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSx for NetApp ONTAP"^]고객이 NetApp ONTAP 스토리지 운영 체제로 구동되는 파일 시스템을 실행하고 실행할 수 있도록 하는 완전 관리형 서비스입니다.  FSx for ONTAP NetApp 고객이 온프레미스에서 사용하는 것과 동일한 기능, 성능 및 관리 기능을 제공하는 동시에 기본 AWS 서비스의 단순성, 민첩성, 보안 및 확장성을 제공합니다.
+
+
+
+== NetApp 콘솔
+
+Amazon FSx for NetApp ONTAP 관리는 NetApp 콘솔을 통해 액세스할 수 있습니다.
+
+NetApp 콘솔은 엔터프라이즈급 온프레미스 및 클라우드 환경 전반에서 NetApp 스토리지 및 데이터 서비스를 중앙에서 관리할 수 있는 기능을 제공합니다. NetApp 데이터 서비스에 액세스하고 사용하려면 콘솔이 필요합니다. 관리 인터페이스로서, 하나의 인터페이스에서 여러 스토리지 리소스를 관리할 수 있습니다. 콘솔 관리자는 기업 내 모든 시스템의 저장소와 서비스에 대한 액세스를 제어할 수 있습니다.
+
+NetApp Console을 사용하려면 라이선스나 구독이 필요하지 않으며, 스토리지 시스템이나 NetApp 데이터 서비스에 대한 연결을 보장하기 위해 클라우드에 Console 에이전트를 배포해야 할 때만 요금이 부과됩니다. 그러나 콘솔에서 액세스할 수 있는 일부 NetApp 데이터 서비스는 라이선스 기반이거나 구독 기반입니다.
+
+자세히 알아보세요 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp 콘솔"] .
+
+
+
+== NetApp 콘솔에서 FSx for ONTAP 사용
+
+NetApp 콘솔 시스템 페이지에서 FSx for ONTAP 시스템을 만들고 검색하고 System Manager와 기타 NetApp 서비스를 사용할 수 있습니다.  Amazon FSx for NetApp ONTAP for ONTAP 시스템 및 워크로드를 관리하려면 다음을 사용하세요. https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp 워크로드 팩토리"^] .
+
+link:../use/task-creating-fsx-working-environment.html["NetApp 콘솔에서 FSx for ONTAP 시스템을 생성하고 검색하는 방법을 알아보세요."^] .
+
+
+
+== 특징
+
+* 저장 장치, 소프트웨어 또는 백업을 구성하거나 관리할 필요가 없습니다.
+* CIFS, iSCSI, NFSv3, NFSv4.x 지원 https://docs.netapp.com/us-en/ontap/s3-config/ontap-version-support-s3-concept.html["S3"^] 및 SMB v2.0 - v3.1.1 프로토콜.
+* 사용 가능한 Infently Accessed(IA) 스토리지 계층을 사용하여 저렴하고 사실상 무제한의 데이터 저장 용량을 제공합니다.
+* Oracle RAC를 포함한 지연 시간에 민감한 애플리케이션에서 실행되도록 인증되었습니다.
+* 묶음 가격 또는 사용량에 따른 가격 중에서 선택할 수 있습니다.
+
+
+
+
+== NetApp 콘솔의 추가 기능
+
+* FSx for ONTAP NetApp 콘솔을 _표준_ 모드로 사용할 때 지원되며, 이는 NetApp 콘솔 SaaS 계층을 활용하여 모든 기능을 제공합니다.  _제한_ 모드와 _비공개_ 모드는 지원되지 않습니다.
+
+
+. link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["NetApp 콘솔 배포 모드"^] 자세한 내용은.
+
+* 사용 중link:https://docs.netapp.com/us-en/console-family/["NetApp 콘솔"^] AWS의 콘솔 에이전트를 사용하면 볼륨을 생성 및 관리하고, 데이터를 복제하고, FSx for ONTAP NetApp 데이터 분류 및 NetApp 복사 및 동기화와 같은 NetApp 클라우드 서비스와 통합할 수 있습니다.
+* NetApp 데이터 분류는 인공지능(AI) 기반 기술을 사용하여 데이터 컨텍스트를 이해하고 FSx for ONTAP 계정에 있는 중요한 데이터를 식별하는 데 도움이 될 수 있습니다. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["자세히 알아보기"^] .
+* NetApp Copy and Sync를 사용하면 클라우드나 온프레미스의 모든 대상으로 데이터 마이그레이션을 자동화할 수 있습니다. https://docs.netapp.com/us-en/data-services-copy-sync/concept-cloud-sync.html["자세히 알아보기"^]
+
+
+
+
+== 콘솔 에이전트 및 링크는 모든 FSx for ONTAP 기능을 잠금 해제합니다.
+
+콘솔 에이전트와 링크는 NetApp 콘솔과 Amazon FSx for NetApp ONTAP 작업 환경 간의 연결과 신뢰 관계를 구축합니다.  콘솔 에이전트는 클라우드 또는 온프레미스 네트워크에서 실행되는 NetApp 소프트웨어이며, 링크는 AWS Lambda를 사용하여 NetApp 코드를 실행합니다.  콘솔에서 시작하거나 FSx for ONTAP 시스템을 생성하려면 콘솔 에이전트나 링크가 필요하지 않지만, FSx for ONTAP 기능을 최대한 활용하려면 콘솔 에이전트나 링크를 사용해야 합니다.
+
+다음 기능을 사용하려면 콘솔 에이전트나 링크가 필요합니다.
+
+* 사전 예방적 유지 관리, 안정성 및 비용 성능 최적화를 위한 FSx for ONTAP 파일 시스템 구성의 잘 설계된 상태
+* NetApp 자율형 랜섬웨어 보호(ARP/AI)
+* FSx for ONTAP 파일 시스템 전반의 향상된 전체적인 용량 관찰 기능
+* 볼륨 및 스토리지 VM 데이터 복제, 관리 및 모니터링
+* SMB/CIFS 공유 및 NFS 내보내기 정책 프로비저닝 및 관리
+* FSx for ONTAP 파일 시스템에서 iSCSI 볼륨 관리
+* 사용자 정의 보호 SLA에 대한 스냅샷 정책 생성 및 관리
+* 자동 용량 관리를 위한 Inode 관리 향상
+* 탄력적 확장을 위한 볼륨 자동 증가
+* 즉각적이고 즉각적인 데이터 복제를 위한 복제본 생성 및 관리
+* ONTAP 버전과 같은 ONTAP 에서 직접 추가 메트릭 표시
+
+
+콘솔 에이전트와 링크에 대해 자세히 알아보고, 언제 사용해야 하는지 알아보세요.
+
+* https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["콘솔 에이전트에 대해 자세히 알아보세요"^] .
+* https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["링크에 대해 자세히 알아보세요"^] .
+
+
+
+
+== 비용
+
+FSx for ONTAP 계정은 NetApp 아닌 AWS에서 관리합니다. 참조하다 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSx for NetApp ONTAP 시작 가이드"^] .
+
+AWS의 콘솔 에이전트나 링크를 사용하는 경우, 그리고 NetApp 데이터 분류, NetApp 복사 및 동기화와 같은 선택적 데이터 서비스를 사용하는 경우 추가 비용이 발생합니다.
+
+
+
+== 지원되는 지역
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["지원되는 Amazon 지역을 확인하세요."^]
+
+
+
+== 도움 받기
+
+Amazon FSx for NetApp ONTAP 은 AWS의 자체 솔루션입니다.  FSx for ONTAP 파일 시스템, 인프라 또는 이 서비스를 사용하는 솔루션과 관련된 질문이나 기술 지원 문제가 있는 경우 AWS Management Console의 지원 센터를 사용하여 AWS에 지원 사례를 개설하세요.  "FSx for ONTAP" 서비스와 적절한 카테고리를 선택하세요.  AWS 지원 사례를 생성하는 데 필요한 나머지 정보를 제공하세요.
+
+NetApp 콘솔이나 NetApp 스토리지 솔루션 및 서비스에 대한 일반 및 기술 지원 문제의 경우 NetApp 조직 수준 일련 번호를 사용하여 NetApp 지원 티켓을 열 수 있습니다.  당신은 필요합니다link:https://docs.netapp.com/us-en/console-fsx-ontap/support/task-support-registration.html["NetApp 조직 등록"^] 지원을 활성화합니다.

@@ -1,0 +1,11 @@
+= 자격 증명 업데이트
+:allow-uri-read: 
+
+
+
+
+=== 자격 증명 업데이트
+
+FSx for ONTAP 파일 시스템에 대한 자격 증명과 권한을 설정하면 BlueXP 자격 증명 페이지로 리디렉션됩니다.  이 페이지에서 FSx for ONTAP 자격 증명의 이름을 바꾸거나 제거할 수 있습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["ONTAP 파일 시스템용 FSx에 대한 권한 설정"]

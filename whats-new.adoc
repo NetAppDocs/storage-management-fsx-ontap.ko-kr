@@ -1,0 +1,430 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, cloud manager, NetApp Console' 
+summary: Amazon FSx for NetApp ONTAP 의 새로운 기능을 알아보세요. 
+---
+= Amazon FSx for NetApp ONTAP 의 새로운 기능
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+FSx for ONTAP 의 새로운 기능을 알아보세요.
+
+
+
+== 2025년 10월 6일
+
+
+
+=== BlueXP 는 이제 NetApp 콘솔입니다.
+
+강화되고 재구성된 BlueXP 기반을 기반으로 구축된 NetApp 콘솔은 엔터프라이즈급 온프레미스 및 클라우드 환경 전반에서 NetApp 스토리지와 NetApp 데이터 서비스를 중앙에서 관리하여 실시간 통찰력, 더 빠른 워크플로, 간소화된 관리를 제공하며, 높은 보안성과 규정 준수를 보장합니다.
+
+변경된 내용에 대한 자세한 내용은 다음을 참조하세요.link:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp 콘솔 릴리스 노트."^]
+
+
+
+== 2025년 8월 3일
+
+
+
+=== 복제 관계 탭 개선
+
+*복제 관계* 탭에서 복제 관계에 대한 자세한 정보를 제공하기 위해 복제 관계 표에 여러 개의 새 열을 추가했습니다. 이제 표에는 다음 열이 포함됩니다.
+
+* SnapMirror 정책
+* 소스 파일 시스템
+* 대상 파일 시스템
+* 관계의 상태
+* 마지막 환승 시간
+
+
+
+
+== 2025년 7월 14일
+
+
+
+=== 두 FSx for ONTAP 파일 시스템 간 데이터 복제 지원
+
+이제 BlueXP 콘솔의 캔버스에서 두 FSx for ONTAP 파일 시스템 간에 데이터를 복제할 수 있습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#replicate-data["데이터 복제"]
+
+
+
+== 2025년 6월 29일
+
+
+
+=== 자격 증명 업데이트
+
+FSx for ONTAP 파일 시스템에 대한 자격 증명과 권한을 설정하면 BlueXP 자격 증명 페이지로 리디렉션됩니다.  이 페이지에서 FSx for ONTAP 자격 증명의 이름을 바꾸거나 제거할 수 있습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["ONTAP 파일 시스템용 FSx에 대한 권한 설정"]
+
+
+
+== 2025년 5월 4일
+
+
+
+=== 추적 응답 지원
+
+이제 Tracker에서 API 응답을 제공하므로 작업과 관련된 REST API 출력을 볼 수 있습니다.
+
+
+
+=== AWS Secrets Manager에 대한 링크 인증 지원
+
+이제 AWS Secrets Manager의 비밀을 사용하여 링크를 인증할 수 있는 옵션이 제공되므로 BlueXP Workloads에 저장된 자격 증명을 사용할 필요가 없습니다.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Lambda 링크를 사용하여 FSx for ONTAP 파일 시스템에 연결"]
+
+
+
+=== ONTAP 파일 시스템용 FSx에 대한 모범 사례 구현
+
+BlueXP Workloads는 파일 시스템 구성의 잘 설계된 상태를 검토할 수 있는 대시보드를 제공합니다.  이 분석을 활용하여 FSx for ONTAP 파일 시스템에 대한 모범 사례를 구현할 수 있습니다.  파일 시스템 구성 분석에는 다음 구성이 포함됩니다. SSD 용량 임계값, 예약된 로컬 스냅샷, ONTAP 백업을 위한 예약된 FSx, 데이터 계층화 및 원격 데이터 복제.
+
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["파일 시스템 구성을 위한 잘 설계된 분석에 대해 알아보세요"]
+* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["파일 시스템에 대한 모범 사례 구현"]
+
+
+
+
+=== 파일 시스템 문제에 대한 잘 설계된 알림
+
+BlueXP 콘솔에서 잘 설계된 문제가 있는 FSx for ONTAP 파일 시스템의 경우 이제 파일 시스템에 수정해야 할 문제가 있을 때 이를 알리는 알림이 Canvas에 표시됩니다.
+
+
+
+=== 업데이트된 권한 용어
+
+워크로드 팩토리 사용자 인터페이스와 설명서에서는 이제 읽기 권한을 나타내는 데 "읽기 전용"을 사용하고 자동화 권한을 나타내는 데 "읽기/쓰기"를 사용합니다.
+
+
+
+== 2025년 3월 30일
+
+
+
+=== iam:SimulatePermissionPolicy 권한 업데이트
+
+이제 관리할 수 있습니다 `iam:SimulatePrincipalPolicy` AWS 계정 자격 증명을 추가하거나 GenAI 워크로드와 같은 새로운 워크로드 기능을 추가할 때 BlueXP 콘솔에서 권한을 부여합니다.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["권한 참조 변경 로그"^]
+
+
+
+== 2025년 3월 2일
+
+
+
+=== Tracker의 CloudShell 이벤트
+
+BlueXP Workloads에서 CloudShell을 사용하여 FSx for ONTAP 작업을 실행할 때마다 이벤트가 Tracker에 표시됩니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-monitor-operations.html["BlueXP 에서 FSx for ONTAP 작업을 모니터링하고 추적하는 방법을 알아보세요."^]
+
+
+
+== 2025년 2월 2일
+
+
+
+=== BlueXP 의 작업 공간과 FSx for ONTAP 파일 시스템 연결
+
+2024년 11월 BlueXP 통합 이후 새로 생성된 FSx for ONTAP 파일 시스템은 BlueXP 의 어떤 작업 공간과도 연결되지 않았습니다.  이제 FSx for ONTAP 파일 시스템을 생성하거나 검색하면 해당 파일 시스템이 BlueXP 계정 내의 하나의 작업 공간과 연결됩니다.
+
+작업 공간과 연결되지 않은 기존 FSx for ONTAP 파일 시스템이 있는 경우 BlueXP 에서 해당 파일 시스템을 작업 공간과 연결하는 데 도움을 드립니다.  당신은 할 수 있습니다link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html#create-a-case-with-netapp-support["NetApp 지원에 케이스 생성"^] BlueXP 콘솔 내에서.  서비스로 *Workload Factory*를 선택하세요.
+
+
+
+=== BlueXP 캔버스에서 파일 시스템 제거
+
+이제 BlueXP 캔버스의 작업 공간에서 FSx for ONTAP 파일 시스템을 제거할 수 있습니다.  이 작업을 수행하면 파일 시스템을 하나의 작업 공간에서 분리하여 동일한 BlueXP 계정 내의 다른 작업 공간과 연결할 수 있습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-remove-filesystem.html["BlueXP 에서 작업 공간에서 FSx for ONTAP 파일 시스템을 제거하는 방법을 알아보세요."^]
+
+
+
+=== 작업 모니터링 및 추적을 위한 추적기 사용 가능
+
+새로운 모니터링 기능인 Tracker는 BlueXP Amazon FSx for NetApp ONTAP 에서 사용할 수 있습니다.  Tracker를 사용하면 자격 증명, 저장소 및 링크 작업의 진행 상황과 상태를 모니터링하고 추적하고, 작업 작업 및 하위 작업에 대한 세부 정보를 검토하고, 문제나 오류를 진단하고, 실패한 작업에 대한 매개변수를 편집하고, 실패한 작업을 다시 시도할 수 있습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-monitor-operations.html["BlueXP 에서 FSx for ONTAP 작업을 모니터링하고 추적하는 방법을 알아보세요."^]
+
+
+
+=== BlueXP 워크로드에서 사용 가능한 CloudShell
+
+CloudShell은 BlueXP 콘솔 내에서 BlueXP 워크로드를 사용할 때 사용할 수 있습니다.  CloudShell을 사용하면 BlueXP 계정에서 제공한 AWS 및 ONTAP 자격 증명을 사용하여 셸과 유사한 환경에서 AWS CLI 명령이나 ONTAP CLI 명령을 실행할 수 있습니다.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["CloudShell을 사용하세요"^]
+
+
+
+== 2025년 1월 6일
+
+
+
+=== NetApp 추가 CloudFormation 리소스 출시
+
+NetApp 이제 고객이 AWS 콘솔에 노출되지 않은 고급 ONTAP 구성 요소를 활용할 수 있도록 CloudFormation 리소스를 제공합니다.  CloudFormation은 AWS를 위한 인프라 코드 메커니즘입니다.  복제 관계, CIFS 공유, NFS 내보내기 정책, 스냅샷 등을 만들 수 있습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html["CloudFormation을 사용하여 Amazon FSx for NetApp ONTAP 파일 시스템 관리"]
+
+
+
+== 2024년 11월 11일
+
+
+
+=== FSx for ONTAP BlueXP Workload Factory의 스토리지와 통합됩니다.
+
+볼륨 추가, 파일 시스템 용량 확장, 스토리지 VM 관리 등의 FSx for ONTAP 파일 시스템 관리 작업은 이제 NetApp 과 Amazon FSx for NetApp ONTAP 에서 제공하는 새로운 서비스인 BlueXP workload factory 에서 관리됩니다.  기존 자격 증명과 권한을 이전과 마찬가지로 사용할 수 있습니다.  차이점은 이제 BlueXP workload factory 에서 파일 시스템을 관리하는 데 더 많은 작업을 수행할 수 있다는 것입니다.  BlueXP 캔버스에서 FSx for ONTAP 작업 환경을 열면 BlueXP workload factory 로 바로 이동합니다.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html#features["BlueXP workload factory 의 FSx for ONTAP 기능에 대해 알아보세요."^]
+
+ONTAP 시스템 관리자를 사용하여 ONTAP 파일 시스템용 FSx를 관리할 수 있는 _고급 보기_ 옵션을 찾고 있다면, 이제 작업 환경을 선택한 후 BlueXP 캔버스에서 해당 옵션을 찾을 수 있습니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-fsx-ontap/main/media/screenshot-system-manager.png["시스템 관리자 옵션이 표시된 작업 환경을 선택한 후 BlueXP Canvas의 오른쪽 패널의 스크린샷입니다."]
+
+
+
+== 2023년 7월 30일
+
+
+
+=== 3개의 추가 지역 지원
+
+이제 고객은 유럽(취리히), 유럽(스페인), 아시아 태평양(하이데라바드)의 세 개의 새로운 AWS 지역에서 Amazon FSx for NetApp ONTAP 파일 시스템을 만들 수 있습니다.
+
+참조하다link:https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-fsx-netapp-ontap-three-regions/#:~:text=Customers%20can%20now%20create%20Amazon,file%20systems%20in%20the%20cloud["Amazon FSx for NetApp ONTAP 이 이제 3개 추가 지역에서 사용 가능합니다."^] 자세한 내용은 다음을 참조하세요.
+
+
+
+== 2023년 7월 2일
+
+
+
+=== 스토리지 VM 추가
+
+이제 BlueXP 사용하여 Amazon FSx for NetApp ONTAP 파일 시스템에 스토리지 VM을 추가할 수 있습니다.
+
+
+
+=== **내 기회** 탭이 이제 **내 재산**으로 변경되었습니다.
+
+**나의 기회** 탭이 이제 **내 재산**으로 바뀌었습니다.  새로운 이름을 반영하여 문서가 업데이트되었습니다.
+
+
+
+== 2023년 6월 4일
+
+
+
+=== 유지 관리 창 시작 시간
+
+언제link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment["작업 환경 만들기"] , 주간 30분 유지 관리 창의 시작 시간을 지정하여 유지 관리가 중요한 비즈니스 활동과 충돌하지 않도록 할 수 있습니다.
+
+
+
+=== FlexGroups를 사용하여 볼륨 데이터 배포
+
+볼륨을 생성할 때 FlexGroup 생성하여 볼륨 전체에 데이터를 분산함으로써 데이터 최적화를 활성화할 수 있습니다.
+
+
+
+== 2023년 6월 4일
+
+
+
+=== 유지 관리 창 시작 시간
+
+언제link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment["작업 환경 만들기"] , 주간 30분 유지 관리 창의 시작 시간을 지정하여 유지 관리가 중요한 비즈니스 활동과 충돌하지 않도록 할 수 있습니다.
+
+
+
+=== FlexGroups를 사용하여 볼륨 데이터 배포
+
+볼륨을 생성할 때 FlexGroup 생성하여 볼륨 전체에 데이터를 분산함으로써 데이터 최적화를 활성화할 수 있습니다.
+
+
+
+== 2023년 5월 7일
+
+
+
+=== 보안 그룹 생성
+
+작업 환경을 만들 때 이제 BlueXP 사용할 수 있습니다.link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment["보안 그룹 생성"] 선택된 VPC 내에서만 트래픽을 허용합니다.  이 기능link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["추가 권한이 필요합니다"] .
+
+
+
+=== 태그 추가 또는 수정
+
+원하는 경우 태그를 추가하고 수정하여 볼륨을 분류할 수 있습니다.
+
+
+
+== 2023년 4월 2일
+
+
+
+=== IOPS 한도 증가
+
+IOPS 한도가 늘어나 최대 160,000까지 수동 또는 자동 프로비저닝이 가능해졌습니다.
+
+
+
+== 2023년 3월 5일
+
+
+
+=== 사용자 인터페이스가 향상되었습니다
+
+사용자 인터페이스가 개선되었고, 설명서의 스크린샷이 업데이트되었습니다.
+
+
+
+== 2023년 1월 1일
+
+
+
+=== 자동 용량 관리
+
+이제 활성화를 선택할 수 있습니다.link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity["자동 용량 관리"] 수요에 따라 증분 저장 공간을 추가합니다.  자동 용량 관리 기능은 정기적으로 클러스터를 폴링하여 수요를 평가하고 클러스터 최대 용량의 10% 단위로 최대 80%까지 저장 용량을 자동으로 늘립니다.
+
+
+
+== 2022년 9월 18일
+
+
+
+=== 저장 용량 및 IOPS 변경
+
+이제 할 수 있습니다link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#change-storage-capacity-and-IOPS["저장 용량 및 IOPS 변경"] FSx for ONTAP 작업 환경을 만든 후 언제든지.
+
+
+
+== 2022년 7월 31일
+
+
+
+=== *내 재산* 기능
+
+이전에 Cloud Manager에 AWS 자격 증명을 제공한 경우 새로운 *내 자산* 기능을 사용하면 Cloud Manager를 사용하여 추가하고 관리할 FSx for ONTAP 파일 시스템을 자동으로 검색하고 제안할 수 있습니다.  *내 재산* 탭을 통해 사용 가능한 데이터 서비스를 검토할 수도 있습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system["My estate를 사용하여 FSx for ONTAP 을 알아보세요"]
+
+
+
+=== 처리량 용량 변경
+
+이제 할 수 있습니다link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#change-throughput-capacity["처리량 용량 변경"] FSx for ONTAP 작업 환경을 만든 후 언제든지.
+
+
+
+=== 데이터 복제 및 동기화
+
+이제 FSx for ONTAP 을 소스로 사용하여 온프레미스 및 기타 FSx for ONTAP 시스템에 데이터를 복제하고 동기화할 수 있습니다.
+
+
+
+=== iSCSI 볼륨 생성
+
+이제 Cloud Manager를 사용하여 FSx for ONTAP 에서 iSCSI 볼륨을 생성할 수 있습니다.
+
+
+
+== 2022년 7월 3일
+
+
+
+=== 단일 또는 다중 가용성 영역 지원
+
+이제 하나 또는 여러 개의 가용성 영역 HA 배포 모델을 선택할 수 있습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment["ONTAP 작업 환경을 위한 FSx 만들기"]
+
+
+
+=== GovCloud 계정 인증 지원
+
+AWS GovCloud 계정 인증이 이제 Cloud Manager에서 지원됩니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html#set-up-the-iam-role["IAM 역할 설정"]
+
+
+
+== 2022년 2월 27일
+
+
+
+=== IAM 역할 가정
+
+ONTAP 작업 환경용 FSx를 생성할 때 이제 Cloud Manager가 ONTAP 작업 환경용 FSx를 생성할 수 있는 IAM 역할의 ARN을 제공해야 합니다.  이전에는 AWS 액세스 키를 제공해야 했습니다.
+
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["FSx for ONTAP 에 대한 권한을 설정하는 방법을 알아보세요"] .
+
+
+
+== 2021년 10월 31일
+
+
+
+=== Cloud Manager API를 사용하여 iSCSI 볼륨 생성
+
+Cloud Manager API를 사용하여 FSx for ONTAP 에 대한 iSCSI 볼륨을 생성하고 작업 환경에서 관리할 수 있습니다.
+
+
+
+=== 볼륨을 생성할 때 볼륨 단위를 선택하세요
+
+FSx for ONTAP 에서 볼륨을 생성할 때 볼륨 단위(GiB 또는 TiB)를 선택할 수 있습니다.
+
+
+
+== 2021년 10월 4일
+
+
+
+=== Cloud Manager를 사용하여 CIFS 볼륨 만들기
+
+이제 Cloud Manager를 사용하여 FSx for ONTAP 에서 CIFS 볼륨을 생성할 수 있습니다.
+
+
+
+=== Cloud Manager를 사용하여 볼륨 편집
+
+이제 Cloud Manager를 사용하여 FSx for ONTAP 볼륨을 편집할 수 있습니다.
+
+
+
+== 2021년 9월 2일
+
+
+
+=== Amazon FSx for NetApp ONTAP 지원
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSx for NetApp ONTAP"^]고객이 NetApp의 ONTAP 스토리지 운영 체제를 기반으로 파일 시스템을 실행하고 실행할 수 있도록 하는 완전 관리형 서비스입니다.  FSx for ONTAP NetApp 고객이 온프레미스에서 사용하는 것과 동일한 기능, 성능 및 관리 기능을 제공하는 동시에 기본 AWS 서비스의 단순성, 민첩성, 보안 및 확장성을 제공합니다.
++
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html["Amazon FSx for NetApp ONTAP 에 대해 알아보세요"] .
+
+* Cloud Manager에서 FSx for ONTAP 작업 환경을 구성할 수 있습니다.
++
+link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["Amazon FSx for NetApp ONTAP 작업 환경 만들기"] .
+
+* AWS와 Cloud Manager의 커넥터를 사용하면 볼륨을 생성 및 관리하고, 데이터를 복제하고, FSx for ONTAP Data Sense 및 Cloud Sync 와 같은 NetApp 클라우드 서비스와 통합할 수 있습니다.
++
+link:https://docs.netapp.com/us-en/bluexp-classification/task-scanning-fsx.html["Amazon FSx for NetApp ONTAP 용 Cloud Data Sense 시작하기"^] .
+
+

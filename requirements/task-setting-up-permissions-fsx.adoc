@@ -1,0 +1,294 @@
+---
+sidebar: sidebar 
+permalink: requirements/task-setting-up-permissions-fsx.html 
+keywords: fsx for ontap, iam, user role, permissions, credentials, bluexp 
+summary: FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp 콘솔에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp 콘솔에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다. 
+---
+= FSx for ONTAP 에 대한 권한 설정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp 콘솔에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp 콘솔에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.
+
+
+
+== AWS 자격 증명이 필요한 이유
+
+NetApp 콘솔에서 FSx for ONTAP 시스템을 만들고 관리하려면 AWS 자격 증명이 필요합니다.  새로운 AWS 자격 증명을 만들거나 기존 조직에 AWS 자격 증명을 추가할 수 있습니다.  자격 증명은 NetApp 콘솔에서 AWS 클라우드 환경 내의 리소스와 프로세스를 관리하는 데 필요한 권한을 제공합니다.
+
+자격 증명과 권한은 NetApp Workload Factory를 통해 관리됩니다.  Workload Factory는 사용자가 Amazon FSx for NetApp ONTAP 파일 시스템을 사용하여 워크로드를 최적화하는 데 도움이 되도록 설계된 수명 주기 관리 플랫폼입니다.  NetApp 콘솔은 Workload Factory와 동일한 AWS 자격 증명 및 권한 세트를 사용합니다.
+
+Workload Factory 인터페이스는 FSx for ONTAP 사용자에게 스토리지, VMware, 데이터베이스, GenAI 등의 워크로드 기능을 활성화하고 워크로드에 대한 권한을 선택할 수 있는 옵션을 제공합니다.  _Storage_는 Workload Factory의 스토리지 관리 기능이며, FSx for ONTAP 파일 시스템을 생성하고 관리하기 위해 자격 증명을 활성화하고 추가해야 하는 유일한 기능입니다.
+
+
+
+== 이 작업에 관하여
+
+Workload Factory의 Storage에서 FSx for ONTAP 에 대한 새로운 자격 증명을 추가할 때, 어떤 수준의 권한 또는 _운영 모드_로 작업할지 결정해야 합니다. FSx for ONTAP 파일 시스템과 같은 AWS 리소스를 검색하고 배포하려면 _읽기 전용_ 또는 _읽기/쓰기_ 권한이 필요합니다.  FSx for ONTAP 은 _읽기 전용_ 모드나 _읽기/쓰기_ 모드를 선택하지 않는 한 _기본_ 모드에서 작동합니다.  _읽기 전용_은 보기 권한과 동일합니다.  _읽기/쓰기_는 운영 권한과 동일합니다. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["운영 모드에 대해 자세히 알아보세요"] .
+
+새 AWS 자격 증명과 기존 AWS 자격 증명은 *자격 증명* 페이지의 관리 메뉴에서 볼 수 있습니다.
+
+image:screenshot-netapp-console-administration-credentials.png["NetApp 콘솔 관리 메뉴에서 강조 표시된 관리 메뉴와 자격 증명 옵션의 스크린샷입니다."]
+
+다음 두 가지 방법을 사용하여 자격 증명을 추가할 수 있습니다.
+
+* *수동으로*: Workload Factory에서 자격 증명을 추가하는 동안 AWS 계정에서 IAM 정책과 IAM 역할을 생성합니다.
+* *자동으로*: 권한에 대한 최소한의 정보를 수집한 다음 CloudFormation 스택을 사용하여 자격 증명에 대한 IAM 정책과 역할을 만듭니다.
+
+
+
+
+== 계정에 자격 증명을 수동으로 추가
+
+NetApp 콘솔에 AWS 자격 증명을 수동으로 추가하여 고유한 워크로드를 실행하는 데 사용할 AWS 리소스를 관리하는 데 필요한 권한을 계정에 부여할 수 있습니다. 추가하는 각 자격 증명 세트에는 사용하려는 워크로드 기능에 따라 하나 이상의 IAM 정책과 계정에 할당된 IAM 역할이 포함됩니다.
+
+자격 증명을 만드는 과정은 세 단계로 구성됩니다.
+
+* 사용하려는 서비스와 권한 수준을 선택한 다음 AWS Management Console에서 IAM 정책을 만듭니다.
+* AWS Management Console에서 IAM 역할을 만듭니다.
+* NetApp 콘솔의 워크로드에서 이름을 입력하고 자격 증명을 추가합니다.
+
+
+FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp 콘솔에서 Workloads에 AWS 자격 증명을 추가해야 합니다. 이를 위해 Workloads에 FSx for ONTAP 작업 환경을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.
+
+.시작하기 전에
+AWS 계정에 로그인하려면 자격 증명이 필요합니다.
+
+.단계
+. NetApp 콘솔 메뉴에서 *관리*를 선택한 다음 *자격 증명*을 선택합니다.
+. *조직 자격 증명* 페이지에서 *자격 증명 추가*를 선택합니다.
+. *Amazon Web Services*를 선택한 다음 *FSx for ONTAP*를 선택하고 *다음*을 선택합니다.
++
+이제 NetApp Workloads의 *자격 증명 추가* 페이지에 있습니다.
+
+. *수동으로 추가*를 선택한 다음 아래 단계에 따라 _권한 구성_ 아래의 세 섹션을 작성하세요.
+
+
+
+
+=== 1단계: 스토리지 용량을 선택하고 IAM 정책을 만듭니다.
+
+이 섹션에서는 자격 증명의 일부로 관리할 저장 용량과 저장에 대해 활성화된 권한을 선택합니다.  데이터베이스, GenAI 또는 VMware와 같은 다른 워크로드를 선택할 수도 있습니다.  선택을 마치면 Codebox에서 선택한 각 워크로드에 대한 정책 권한을 복사하여 AWS 계정 내의 AWS Management Console에 추가하여 정책을 생성해야 합니다.
+
+.단계
+. *정책 만들기* 섹션에서 이러한 자격 증명에 포함하려는 각 워크로드 기능을 활성화합니다.  *저장소*를 활성화하여 파일 시스템을 생성하고 관리합니다.
++
+나중에 추가 기능을 추가할 수 있으므로 현재 배포하고 관리하려는 워크로드만 선택하면 됩니다.
+
+. 권한 수준(읽기 전용 또는 읽기/쓰기)을 선택할 수 있는 워크로드 기능의 경우, 해당 자격 증명으로 사용할 수 있는 권한 유형을 선택합니다. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["운영 모드라고도 하는 권한에 대해 알아보세요."^] .
+. 선택 사항: 워크로드 작업을 완료하는 데 필요한 AWS 계정 권한이 있는지 확인하려면 *자동 권한 확인 사용*을 선택합니다.  체크를 활성화하면 다음이 추가됩니다. `iam:SimulatePrincipalPolicy permission` 귀하의 허가 정책에 따라.  이 허가의 목적은 허가를 확인하는 것뿐입니다.  자격 증명을 추가한 후에는 권한을 제거할 수 있지만, 부분적으로 성공적인 작업에 대한 리소스 생성을 방지하고 필요한 수동 리소스 정리 작업을 하지 않아도 되도록 권한을 유지하는 것이 좋습니다.
+. Codebox 창에서 첫 번째 IAM 정책에 대한 권한을 복사합니다.
++
+다음 탭에서 저장 권한을 복사할 수도 있습니다.
+
++
+[role="tabbed-block"]
+====
+.읽기 전용 권한
+--
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "fsx:Describe*",
+        "fsx:ListTagsForResource",
+        "ec2:Describe*",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+--
+.읽기/쓰기 권한
+--
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "fsx:*",
+        "ec2:Describe*",
+        "ec2:CreateTags",
+        "ec2:CreateSecurityGroup",
+        "iam:CreateServiceLinkedRole",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "kms:CreateGrant",
+        "cloudwatch:PutMetricData",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:DeleteSecurityGroup"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/AppCreator": "NetappFSxWF"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+--
+====
+. 다른 브라우저 창을 열고 AWS Management Console에서 AWS 계정에 로그인합니다.
+. IAM 서비스를 열고 *정책* > *정책 만들기*를 선택합니다.
+. 파일 유형으로 JSON을 선택하고, 3단계에서 복사한 권한을 붙여넣은 후 *다음*을 선택합니다.
+. 정책 이름을 입력하고 *정책 만들기*를 선택합니다.
+. 1단계에서 여러 워크로드 기능을 선택한 경우 이 단계를 반복하여 각 워크로드 권한 집합에 대한 정책을 만듭니다.
+
+
+
+
+=== 2단계: 정책을 사용하는 IAM 역할 만들기
+
+이 섹션에서는 Workload Factory가 방금 만든 권한과 정책을 포함하는 IAM 역할을 설정합니다.
+
+.단계
+. AWS Management Console에서 *역할 > 역할 생성*을 선택합니다.
+. *신뢰할 수 있는 엔터티 유형*에서 *AWS 계정*을 선택합니다.
++
+.. *다른 AWS 계정*을 선택하고 워크로드 사용자 인터페이스에서 FSx for ONTAP 워크로드 관리에 대한 계정 ID를 복사하여 붙여넣습니다.
+.. *필수 외부 ID*를 선택하고 워크로드 사용자 인터페이스에서 외부 ID를 복사하여 붙여넣습니다.
+
+
+. *다음*을 선택하세요.
+. 권한 정책 섹션에서 이전에 정의한 모든 정책을 선택하고 *다음*을 선택합니다.
+. 역할의 이름을 입력하고 *역할 만들기*를 선택합니다.
+. 역할 ARN을 복사합니다.
+. 워크로드 자격 증명 추가 페이지로 돌아가서 *역할 만들기* 섹션을 확장하고 _역할 ARN_ 필드에 ARN을 붙여넣습니다.
+
+
+
+
+=== 3단계: 이름을 입력하고 자격 증명을 추가합니다.
+
+마지막 단계는 워크로드에 자격 증명의 이름을 입력하는 것입니다.
+
+.단계
+. 워크로드 자격 증명 추가 페이지에서 *자격 증명 이름*을 확장합니다.
+. 이러한 자격 증명에 사용할 이름을 입력하세요.
+. *추가*를 선택하여 자격 증명을 만듭니다.
+
+
+.결과
+자격 증명은 자격 증명 페이지에서 생성되어 볼 수 있습니다.  이제 FSx for ONTAP 작업 환경을 만들 때 자격 증명을 사용할 수 있습니다.  필요할 때마다 자격 증명의 이름을 바꾸거나 NetApp 콘솔에서 자격 증명을 제거할 수 있습니다.
+
+
+
+== CloudFormation을 사용하여 계정에 자격 증명 추가
+
+AWS CloudFormation 스택을 사용하여 워크로드에 AWS 자격 증명을 추가할 수 있습니다. 사용하려는 워크로드 기능을 선택한 다음 AWS 계정에서 AWS CloudFormation 스택을 시작합니다. CloudFormation은 선택한 워크로드 기능에 따라 IAM 정책과 IAM 역할을 생성합니다.
+
+.시작하기 전에
+* AWS 계정에 로그인하려면 자격 증명이 필요합니다.
+* CloudFormation 스택을 사용하여 자격 증명을 추가하는 경우 AWS 계정에 다음과 같은 권한이 있어야 합니다.
++
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:UpdateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeChangeSet",
+        "cloudformation:ExecuteChangeSet",
+        "cloudformation:ListStacks",
+        "cloudformation:ListStackResources",
+        "cloudformation:GetTemplate",
+        "cloudformation:ValidateTemplate",
+        "lambda:InvokeFunction",
+        "iam:PassRole",
+        "iam:CreateRole",
+        "iam:UpdateAssumeRolePolicy",
+        "iam:AttachRolePolicy",
+        "iam:CreateServiceLinkedRole"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+
+
+.단계
+. NetApp 콘솔 메뉴에서 *관리*를 선택한 다음 *자격 증명*을 선택합니다.
+. *자격 증명 추가*를 선택합니다.
+. *Amazon Web Services*를 선택한 다음 *FSx for ONTAP*를 선택하고 *다음*을 선택합니다.
++
+이제 NetApp Workloads의 *자격 증명 추가* 페이지에 있습니다.
+
+. *AWS CloudFormation을 통해 추가*를 선택합니다.
+. *정책 만들기*에서 자격 증명에 포함하려는 각 워크로드 기능을 활성화하고 각 워크로드에 대한 권한 수준을 선택합니다.
++
+나중에 추가 기능을 추가할 수 있으므로 현재 배포하고 관리하려는 워크로드만 선택하면 됩니다.
+
+. 선택 사항: 워크로드 작업을 완료하는 데 필요한 AWS 계정 권한이 있는지 확인하려면 *자동 권한 확인 사용*을 선택합니다.  체크를 활성화하면 다음이 추가됩니다. `iam:SimulatePrincipalPolicy` 귀하의 허가 정책에 대한 허가.  이 허가의 목적은 허가를 확인하는 것뿐입니다.  자격 증명을 추가한 후에는 권한을 제거할 수 있지만, 부분적으로 성공적인 작업에 대한 리소스 생성을 방지하고 필요한 수동 리소스 정리 작업을 하지 않아도 되도록 권한을 유지하는 것이 좋습니다.
+. *자격 증명 이름*에 해당 자격 증명에 사용할 이름을 입력합니다.
+. AWS CloudFormation에서 자격 증명을 추가합니다.
++
+.. *추가*를 선택하거나 *CloudFormation으로 리디렉션*을 선택하면 CloudFormation으로 리디렉션 페이지가 표시됩니다.
+.. AWS에서 SSO(Single Sign-On)를 사용하는 경우 별도의 브라우저 탭을 열고 AWS 콘솔에 로그인한 후 *계속*을 선택하세요.
++
+FSx for ONTAP 파일 시스템이 있는 AWS 계정에 로그인해야 합니다.
+
+.. CloudFormation 페이지로 리디렉션에서 *계속*을 선택합니다.
+.. 빠른 스택 생성 페이지의 기능 아래에서 *AWS CloudFormation이 IAM 리소스를 생성할 수 있음을 인정합니다*를 선택합니다.
+.. *스택 만들기*를 선택하세요.
+.. 메인 메뉴에서 *관리* > *자격 증명* 페이지로 돌아가서 새로운 자격 증명이 진행 중인지 또는 추가되었는지 확인하세요.
+
+
+
+
+.결과
+자격 증명은 자격 증명 페이지에서 생성되어 볼 수 있습니다.  이제 FSx for ONTAP 작업 환경을 만들 때 자격 증명을 사용할 수 있습니다.  필요할 때마다 자격 증명의 이름을 바꾸거나 NetApp 콘솔에서 자격 증명을 제거할 수 있습니다.

@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: use/task-delete-fsx-system.html 
+keywords: file system, delete file system, file system deletion 
+summary: NetApp 콘솔에서 파일 시스템을 삭제하려면 먼저 파일 시스템과 연결된 볼륨, 스토리지 VM 또는 복제 관계를 삭제해야 합니다. 
+---
+= ONTAP 파일 시스템용 FSx 삭제
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FSx for ONTAP 파일 시스템을 삭제하려면 먼저 파일 시스템과 연결된 볼륨, 스토리지 VM 또는 복제 관계를 삭제해야 합니다.
+
+.단계
+. NetApp 콘솔 메뉴에서 *스토리지*를 선택한 다음 *관리*를 선택합니다.
+. 제거할 파일 시스템을 선택하세요.
+. *시스템 입력*을 선택하세요.
+. 저장소의 FSx for ONTAP 에서 세 개의 점 메뉴를 선택한 다음 *삭제*를 선택합니다.
+. 삭제를 확인하려면 *삭제*를 선택하세요.
+
