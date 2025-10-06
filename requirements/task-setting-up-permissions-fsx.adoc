@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: requirements/task-setting-up-permissions-fsx.html 
 keywords: fsx for ontap, iam, user role, permissions, credentials, bluexp 
-summary: FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp 콘솔에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp 콘솔에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다. 
+summary: FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp Console 에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp Console 에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다. 
 ---
 = FSx for ONTAP 에 대한 권한 설정
 :hardbreaks:
@@ -14,15 +14,15 @@ summary: FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp 콘�
 
 
 [role="lead"]
-FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp 콘솔에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp 콘솔에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.
+FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp Console 에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp Console 에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.
 
 
 
 == AWS 자격 증명이 필요한 이유
 
-NetApp 콘솔에서 FSx for ONTAP 시스템을 만들고 관리하려면 AWS 자격 증명이 필요합니다.  새로운 AWS 자격 증명을 만들거나 기존 조직에 AWS 자격 증명을 추가할 수 있습니다.  자격 증명은 NetApp 콘솔에서 AWS 클라우드 환경 내의 리소스와 프로세스를 관리하는 데 필요한 권한을 제공합니다.
+NetApp Console 에서 FSx for ONTAP 시스템을 만들고 관리하려면 AWS 자격 증명이 필요합니다.  새로운 AWS 자격 증명을 만들거나 기존 조직에 AWS 자격 증명을 추가할 수 있습니다.  자격 증명은 NetApp Console 에서 AWS 클라우드 환경 내의 리소스와 프로세스를 관리하는 데 필요한 권한을 제공합니다.
 
-자격 증명과 권한은 NetApp Workload Factory를 통해 관리됩니다.  Workload Factory는 사용자가 Amazon FSx for NetApp ONTAP 파일 시스템을 사용하여 워크로드를 최적화하는 데 도움이 되도록 설계된 수명 주기 관리 플랫폼입니다.  NetApp 콘솔은 Workload Factory와 동일한 AWS 자격 증명 및 권한 세트를 사용합니다.
+자격 증명과 권한은 NetApp Workload Factory 통해 관리됩니다.  Workload Factory는 사용자가 Amazon FSx for NetApp ONTAP 파일 시스템을 사용하여 워크로드를 최적화하는 데 도움이 되도록 설계된 수명 주기 관리 플랫폼입니다.  NetApp Console Workload Factory와 동일한 AWS 자격 증명 및 권한 세트를 사용합니다.
 
 Workload Factory 인터페이스는 FSx for ONTAP 사용자에게 스토리지, VMware, 데이터베이스, GenAI 등의 워크로드 기능을 활성화하고 워크로드에 대한 권한을 선택할 수 있는 옵션을 제공합니다.  _Storage_는 Workload Factory의 스토리지 관리 기능이며, FSx for ONTAP 파일 시스템을 생성하고 관리하기 위해 자격 증명을 활성화하고 추가해야 하는 유일한 기능입니다.
 
@@ -34,7 +34,7 @@ Workload Factory의 Storage에서 FSx for ONTAP 에 대한 새로운 자격 증�
 
 새 AWS 자격 증명과 기존 AWS 자격 증명은 *자격 증명* 페이지의 관리 메뉴에서 볼 수 있습니다.
 
-image:screenshot-netapp-console-administration-credentials.png["NetApp 콘솔 관리 메뉴에서 강조 표시된 관리 메뉴와 자격 증명 옵션의 스크린샷입니다."]
+image:screenshot-netapp-console-administration-credentials.png["NetApp Console 관리 메뉴에서 강조 표시된 관리 메뉴와 자격 증명 옵션의 스크린샷입니다."]
 
 다음 두 가지 방법을 사용하여 자격 증명을 추가할 수 있습니다.
 
@@ -46,22 +46,22 @@ image:screenshot-netapp-console-administration-credentials.png["NetApp 콘솔 �
 
 == 계정에 자격 증명을 수동으로 추가
 
-NetApp 콘솔에 AWS 자격 증명을 수동으로 추가하여 고유한 워크로드를 실행하는 데 사용할 AWS 리소스를 관리하는 데 필요한 권한을 계정에 부여할 수 있습니다. 추가하는 각 자격 증명 세트에는 사용하려는 워크로드 기능에 따라 하나 이상의 IAM 정책과 계정에 할당된 IAM 역할이 포함됩니다.
+NetApp Console 에 AWS 자격 증명을 수동으로 추가하여 고유한 워크로드를 실행하는 데 사용할 AWS 리소스를 관리하는 데 필요한 권한을 계정에 부여할 수 있습니다.  추가하는 각 자격 증명 세트에는 사용하려는 워크로드 기능에 따라 하나 이상의 IAM 정책과 계정에 할당된 IAM 역할이 포함됩니다.
 
 자격 증명을 만드는 과정은 세 단계로 구성됩니다.
 
 * 사용하려는 서비스와 권한 수준을 선택한 다음 AWS Management Console에서 IAM 정책을 만듭니다.
 * AWS Management Console에서 IAM 역할을 만듭니다.
-* NetApp 콘솔의 워크로드에서 이름을 입력하고 자격 증명을 추가합니다.
+* NetApp Console 의 워크로드에서 이름을 입력하고 자격 증명을 추가합니다.
 
 
-FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp 콘솔에서 Workloads에 AWS 자격 증명을 추가해야 합니다. 이를 위해 Workloads에 FSx for ONTAP 작업 환경을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.
+FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp Console 에서 Workloads에 AWS 자격 증명을 추가해야 합니다. 이를 위해 Workloads에 FSx for ONTAP 작업 환경을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.
 
 .시작하기 전에
 AWS 계정에 로그인하려면 자격 증명이 필요합니다.
 
 .단계
-. NetApp 콘솔 메뉴에서 *관리*를 선택한 다음 *자격 증명*을 선택합니다.
+. NetApp Console 메뉴에서 *관리*를 선택한 다음 *자격 증명*을 선택합니다.
 . *조직 자격 증명* 페이지에서 *자격 증명 추가*를 선택합니다.
 . *Amazon Web Services*를 선택한 다음 *FSx for ONTAP*를 선택하고 *다음*을 선택합니다.
 +
@@ -77,7 +77,7 @@ AWS 계정에 로그인하려면 자격 증명이 필요합니다.
 이 섹션에서는 자격 증명의 일부로 관리할 저장 용량과 저장에 대해 활성화된 권한을 선택합니다.  데이터베이스, GenAI 또는 VMware와 같은 다른 워크로드를 선택할 수도 있습니다.  선택을 마치면 Codebox에서 선택한 각 워크로드에 대한 정책 권한을 복사하여 AWS 계정 내의 AWS Management Console에 추가하여 정책을 생성해야 합니다.
 
 .단계
-. *정책 만들기* 섹션에서 이러한 자격 증명에 포함하려는 각 워크로드 기능을 활성화합니다.  *저장소*를 활성화하여 파일 시스템을 생성하고 관리합니다.
+. *정책 만들기* 섹션에서 이러한 자격 증명에 포함하려는 각 워크로드 기능을 활성화합니다.  *저장소*를 활성화하여 파일 시스템을 만들고 관리합니다.
 +
 나중에 추가 기능을 추가할 수 있으므로 현재 배포하고 관리하려는 워크로드만 선택하면 됩니다.
 
@@ -216,13 +216,13 @@ AWS 계정에 로그인하려면 자격 증명이 필요합니다.
 
 
 .결과
-자격 증명은 자격 증명 페이지에서 생성되어 볼 수 있습니다.  이제 FSx for ONTAP 작업 환경을 만들 때 자격 증명을 사용할 수 있습니다.  필요할 때마다 자격 증명의 이름을 바꾸거나 NetApp 콘솔에서 자격 증명을 제거할 수 있습니다.
+자격 증명은 자격 증명 페이지에서 생성되어 볼 수 있습니다.  이제 FSx for ONTAP 작업 환경을 만들 때 자격 증명을 사용할 수 있습니다.  필요할 때마다 자격 증명의 이름을 바꾸거나 NetApp Console 에서 자격 증명을 제거할 수 있습니다.
 
 
 
 == CloudFormation을 사용하여 계정에 자격 증명 추가
 
-AWS CloudFormation 스택을 사용하여 워크로드에 AWS 자격 증명을 추가할 수 있습니다. 사용하려는 워크로드 기능을 선택한 다음 AWS 계정에서 AWS CloudFormation 스택을 시작합니다. CloudFormation은 선택한 워크로드 기능에 따라 IAM 정책과 IAM 역할을 생성합니다.
+AWS CloudFormation 스택을 사용하여 워크로드에 AWS 자격 증명을 추가할 수 있습니다. 사용하려는 워크로드 기능을 선택한 다음 AWS 계정에서 AWS CloudFormation 스택을 시작합니다.  CloudFormation은 선택한 워크로드 기능에 따라 IAM 정책과 IAM 역할을 생성합니다.
 
 .시작하기 전에
 * AWS 계정에 로그인하려면 자격 증명이 필요합니다.
@@ -262,7 +262,7 @@ AWS CloudFormation 스택을 사용하여 워크로드에 AWS 자격 증명을 �
 
 
 .단계
-. NetApp 콘솔 메뉴에서 *관리*를 선택한 다음 *자격 증명*을 선택합니다.
+. NetApp Console 메뉴에서 *관리*를 선택한 다음 *자격 증명*을 선택합니다.
 . *자격 증명 추가*를 선택합니다.
 . *Amazon Web Services*를 선택한 다음 *FSx for ONTAP*를 선택하고 *다음*을 선택합니다.
 +
@@ -291,4 +291,4 @@ FSx for ONTAP 파일 시스템이 있는 AWS 계정에 로그인해야 합니다
 
 
 .결과
-자격 증명은 자격 증명 페이지에서 생성되어 볼 수 있습니다.  이제 FSx for ONTAP 작업 환경을 만들 때 자격 증명을 사용할 수 있습니다.  필요할 때마다 자격 증명의 이름을 바꾸거나 NetApp 콘솔에서 자격 증명을 제거할 수 있습니다.
+자격 증명은 자격 증명 페이지에서 생성되어 볼 수 있습니다.  이제 FSx for ONTAP 작업 환경을 만들 때 자격 증명을 사용할 수 있습니다.  필요할 때마다 자격 증명의 이름을 바꾸거나 NetApp Console 에서 자격 증명을 제거할 수 있습니다.
