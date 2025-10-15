@@ -14,7 +14,7 @@
 
 이제 AWS Secrets Manager의 비밀을 사용하여 링크를 인증할 수 있는 옵션이 제공되므로 BlueXP Workloads에 저장된 자격 증명을 사용할 필요가 없습니다.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Lambda 링크를 사용하여 FSx for ONTAP 파일 시스템에 연결"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Lambda 링크를 사용하여 FSx for ONTAP 파일 시스템에 연결"^]
 
 
 
@@ -22,8 +22,8 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Lambda �
 
 BlueXP Workloads는 파일 시스템 구성의 잘 설계된 상태를 검토할 수 있는 대시보드를 제공합니다.  이 분석을 활용하여 FSx for ONTAP 파일 시스템에 대한 모범 사례를 구현할 수 있습니다.  파일 시스템 구성 분석에는 다음 구성이 포함됩니다. SSD 용량 임계값, 예약된 로컬 스냅샷, ONTAP 백업을 위한 예약된 FSx, 데이터 계층화 및 원격 데이터 복제.
 
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["파일 시스템 구성을 위한 잘 설계된 분석에 대해 알아보세요"]
-* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["파일 시스템에 대한 모범 사례 구현"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html["파일 시스템 구성을 위한 잘 설계된 분석에 대해 알아보세요"^]
+* link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_well-architected/improve-configurations.html["파일 시스템에 대한 모범 사례 구현"^]
 
 
 

@@ -108,4 +108,4 @@ https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services
 
 Amazon FSx for NetApp ONTAP 은 AWS의 자체 솔루션입니다.  FSx for ONTAP 파일 시스템, 인프라 또는 이 서비스를 사용하는 솔루션과 관련된 질문이나 기술 지원 문제가 있는 경우 AWS Management Console의 지원 센터를 사용하여 AWS에 지원 사례를 개설하세요.  "FSx for ONTAP" 서비스와 적절한 카테고리를 선택하세요.  AWS 지원 사례를 생성하는 데 필요한 나머지 정보를 제공하세요.
 
-NetApp Console 이나 NetApp 스토리지 솔루션 및 서비스에 대한 일반 및 기술 지원 문제의 경우 NetApp 조직 수준 일련 번호를 사용하여 NetApp 지원 티켓을 열 수 있습니다.  당신은 필요합니다link:https://docs.netapp.com/us-en/console-fsx-ontap/support/task-support-registration.html["NetApp 조직 등록"^] 지원을 활성화합니다.
+NetApp Console 이나 NetApp 스토리지 솔루션 및 서비스에 대한 일반 및 기술 지원 문제의 경우 NetApp 조직 수준 일련 번호를 사용하여 NetApp 지원 티켓을 열 수 있습니다. 당신은 필요합니다link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/support/task-support-registration.html["NetApp 조직 등록"^] 지원을 활성화합니다.
