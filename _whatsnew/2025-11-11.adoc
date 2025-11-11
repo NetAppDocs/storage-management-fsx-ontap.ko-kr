@@ -6,6 +6,6 @@
 
 === 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간 복제 지원
 
-NetApp Console 내의 FSx for ONTAP 에서 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간의 데이터 복제가 가능합니다.
+NetApp Console 시스템 페이지에서 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간의 데이터 복제가 가능합니다.
 
 link:https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-manage-fsx-systems.html#replicate-data["데이터 복제"]

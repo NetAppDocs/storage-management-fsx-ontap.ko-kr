@@ -705,7 +705,6 @@
   <block id="71c7be202aa5492f058c76c96014b63b" category="paragraph"><block ref="fb5df87a9aa49fef6376b2c5fbd872f7" category="inline-link-macro-rx"></block>.</block>
   <block id="d1ce6a0a7c0c88afef0bcb3a4052d20f" category="paragraph"><block ref="7a62940b2cbfbe2f0f4e47d8680ba67c" category="inline-link-macro-rx"></block>.</block>
   <block id="fbbad2021b0a185cdad950acc088e8d4" category="doc">온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간 복제 지원</block>
-  <block id="6b3e3878a5fe9ddfda803127234f4a18" category="paragraph">NetApp Console 내의 FSx for ONTAP 에서 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간의 데이터 복제가 가능합니다.</block>
   <block id="fed6a821ac698aa9a5bb359850dda501" category="paragraph">FSx for ONTAP 파일 시스템을 만들거나 관리하려면 NetApp Console 에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp Console 에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.</block>
   <block id="627148ff982de23897329c1203761c95" category="inline-link-macro">권한에 대해 자세히 알아보세요</block>
   <block id="8917975c8444540f1ee9ac0cc5ca14cd" category="paragraph">Workload Factory의 Storage에서 FSx for ONTAP 에 대한 새로운 자격 증명을 추가할 때, 어떤 권한 정책을 부여할지 결정해야 합니다.  FSx for ONTAP 파일 시스템과 같은 AWS 리소스를 검색하려면 _보기, 계획 및 분석_ 권한이 필요합니다.  FSx for ONTAP 파일 시스템을 배포하려면 _파일 시스템 생성 및 삭제_ 권한이 필요합니다.  권한 없이도 FSx for ONTAP 에 대한 기본 작업을 수행할 수 있습니다. <block ref="c61145cf60b5d306fe2b08006e1316ec" category="inline-link-macro-rx"></block>.</block>
@@ -716,4 +715,5 @@
   <block id="608f85440a5eadcbb4a9ce50bb7dda50" category="list-text">두 FSx for ONTAP 파일 시스템 간 또는 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간에 데이터를 복제하려면 파일 시스템에 연결할 수 있는 콘솔 에이전트를 선택하거나 파일 시스템을 입력하여 링크를 연결해야 합니다.</block>
   <block id="5f72153c430537b3e27deff7329da0d0" category="list-text">NetApp Console 시스템 페이지에서 소스 FSx for ONTAP 파일 시스템이나 온프레미스 ONTAP 시스템을 대상 FSx for ONTAP 파일 시스템 위로 끌어다 놓고 *복제*를 선택합니다.</block>
   <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">2025년 11월 11일</block>
+  <block id="1387404b18ce63590b24c55d54d3ff43" category="paragraph">NetApp Console 시스템 페이지에서 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간의 데이터 복제가 가능합니다.</block>
 </blocks>
