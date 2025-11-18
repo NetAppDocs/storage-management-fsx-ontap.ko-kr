@@ -488,7 +488,6 @@
   <block id="580649b6592437bd283b108bcef22b7d" category="inline-link">NetApp Workloads를 사용하여 파일 시스템을 관리하는 방법을 알아보세요.</block>
   <block id="14aa34371e663d81da2ce38739cae4bc" category="paragraph"><block ref="14aa34371e663d81da2ce38739cae4bc" category="inline-link-rx"></block></block>
   <block id="9a7d7fe4ea2506122f2a5355c685706e" category="section-title">ONTAP 시스템 관리자를 사용하여 파일 시스템 관리</block>
-  <block id="af8bf7a0f182ae1d5b8be3687794ca0c" category="paragraph">ONTAP 시스템 관리자 인터페이스를 사용하면 콘솔에서 직접 FSx for ONTAP 파일 시스템을 관리할 수 있습니다.  시스템 관리자를 사용하려면 콘솔 에이전트가 필요합니다.</block>
   <block id="be0bf2e3af6b03378bb493466f3c335f" category="section-title">Amazon CloudFormation을 사용하여 파일 시스템 관리</block>
   <block id="e211b2db96a2f5b2b2868517a76988c8" category="paragraph">Amazon CloudFormation을 사용하여 FSx for ONTAP 파일 시스템 리소스(볼륨, CIFS 공유, 내보내기 정책 등)를 프로비저닝하고 관리할 수 있습니다.</block>
   <block id="12980bf72a2406244df6aef483456919" category="inline-link-macro">NetApp CloudFormation FSx for ONTAP 공급자 GitHub 저장소</block>
@@ -716,4 +715,11 @@
   <block id="5f72153c430537b3e27deff7329da0d0" category="list-text">NetApp Console 시스템 페이지에서 소스 FSx for ONTAP 파일 시스템이나 온프레미스 ONTAP 시스템을 대상 FSx for ONTAP 파일 시스템 위로 끌어다 놓고 *복제*를 선택합니다.</block>
   <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">2025년 11월 11일</block>
   <block id="1387404b18ce63590b24c55d54d3ff43" category="paragraph">NetApp Console 시스템 페이지에서 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간의 데이터 복제가 가능합니다.</block>
+  <block id="f3bb71c095338a2af8e23c9ae07072bf" category="doc">AWS Lambda 링크를 사용할 때 시스템 관리자를 사용할 수 있습니다.</block>
+  <block id="b8cda09456e64356f2c1763e3e53d0af" category="inline-link-macro">고급 ONTAP 작업을 위한 링크 사용에 대해 알아보세요</block>
+  <block id="8a730f2606f493b8d797f6c96c460037" category="paragraph">ONTAP 시스템 관리자 인터페이스는 AWS Lambda 링크와 함께 사용하여 고급 ONTAP 작업을 수행할 수 있습니다. 이는 System Manager와 함께 콘솔 에이전트를 사용하여 콘솔에서 직접 FSx for ONTAP 파일 시스템을 관리하는 것에 대한 대안을 제공합니다. <block ref="3b6bcb03237efb7ff1ce82387184b37d" category="inline-link-macro-rx"></block></block>
+  <block id="2c0d3ac197a4a5c6ec443759849c532e" category="paragraph">ONTAP 시스템 관리자 인터페이스를 사용하면 콘솔에서 직접 FSx for ONTAP 파일 시스템을 관리할 수 있습니다. System Manager를 사용하려면 콘솔 에이전트 또는 AWS Lambda 링크가 필요합니다.</block>
+  <block id="eedc611f4a0b9ac93cb166f88e46128a" category="inline-link-macro">링크 사용에 대해 알아보세요</block>
+  <block id="61b7909f43b8222037001004e52dc71c" category="paragraph"><block ref="61b7909f43b8222037001004e52dc71c" category="inline-link-macro-rx"></block></block>
+  <block id="b566b4df138c2254f68b7631cba29c1d" category="section-title">2025년 11월 17일</block>
 </blocks>
