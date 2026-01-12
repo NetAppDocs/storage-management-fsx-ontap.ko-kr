@@ -217,8 +217,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html#featu
 
 ONTAP 시스템 관리자를 사용하여 ONTAP 파일 시스템용 FSx를 관리할 수 있는 _고급 보기_ 옵션을 찾고 있다면, 이제 작업 환경을 선택한 후 BlueXP 캔버스에서 해당 옵션을 찾을 수 있습니다.
 
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-fsx-ontap/main/media/screenshot-system-manager.png["시스템 관리자 옵션이 표시된 작업 환경을 선택한 후 BlueXP Canvas의 오른쪽 패널의 스크린샷입니다."]
-
 
 
 == 2023년 7월 30일
