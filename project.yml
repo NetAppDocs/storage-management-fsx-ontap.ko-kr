@@ -29,6 +29,8 @@ sidebar:
       url: "/use/task-create-fsx-system.html"
   - title: ONTAP 파일 시스템용 FSx 관리
     url: "/use/task-manage-fsx-systems.html"
+  - title: 데이터 복제
+    url: "/use/task-replicate-data.html"
   - title: Tracker로 작업 모니터링
     url: "/use/task-monitor-operations.html"
   - title: 프로젝트에서 파일 시스템 제거

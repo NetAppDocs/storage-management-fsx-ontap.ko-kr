@@ -346,7 +346,6 @@
   <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">콘솔의 오른쪽 상단에서 도움말 아이콘을 선택하고 *지원*을 선택하세요.</block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">지원 등록 페이지에서 계정 ID 일련 번호를 찾으세요.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">지원이 첫 번째 옵션으로 나열된 도움말 메뉴의 스크린샷</block>
-  <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">NetApp 지원 등록 사이트</block>
   <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">로 이동<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> *저는 등록된 NetApp 고객이 아닙니다*를 선택하세요.</block>
   <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">필수 입력란(빨간색 별표가 있는 항목)을 작성해 주세요.</block>
@@ -369,7 +368,6 @@
   <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">이러한 NSS 자격 증명은 특정 콘솔 계정 ID와 연결됩니다. 콘솔 조직에 속한 사용자는 *지원 &gt; NSS 관리*에서 이러한 자격 증명에 액세스할 수 있습니다.</block>
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">고객 수준 계정이 있는 경우 하나 이상의 NSS 계정을 추가할 수 있습니다.</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">파트너 또는 리셀러 계정이 있는 경우 하나 이상의 NSS 계정을 추가할 수 있지만 고객 수준 계정과 함께 추가할 수는 없습니다.</block>
-  <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">*NSS 관리 &gt; NSS 계정 추가*를 선택하세요.</block>
   <block id="85b9386ed443776127e099931d73448a" category="list-text">메시지가 표시되면 *계속*을 선택하여 Microsoft 로그인 페이지로 이동합니다.</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp 지원 및 라이선싱에 특화된 인증 서비스를 위한 ID 공급자로 Microsoft Entra ID를 사용합니다.</block>
@@ -381,8 +379,6 @@
   <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">기존 고객 수준 NSS 계정이 있고 파트너 수준 계정을 추가하려는 경우에도 마찬가지입니다.</block>
   <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">로그인에 성공하면 NetApp NSS 사용자 이름을 저장합니다.</block>
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">세 개의 수평 점으로 구성된 아이콘</block>
-  <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">이는 귀하의 이메일에 매핑되는 시스템 생성 ID입니다. *NSS 관리* 페이지에서 이메일을 표시할 수 있습니다.<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> 메뉴.</block>
-  <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">로그인 자격 증명 토큰을 새로 고쳐야 하는 경우 *자격 증명 업데이트* 옵션도 있습니다.<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> 메뉴.</block>
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">이 옵션을 사용하면 다시 로그인하라는 메시지가 표시됩니다. 이 계정의 토큰은 90일 후에 만료됩니다. 이에 대한 알림이 게시됩니다.</block>
   <block id="fb88ab98d0ec536d50b32178bf99d0a5" category="summary">NetApp Console 에서 볼륨과 추가 데이터 서비스를 추가하고 관리하기 위해 FSx for ONTAP 파일 시스템을 만들거나 검색합니다.</block>
   <block id="47dffe46f483dc8772ef312e93c97c16" category="doc">ONTAP 파일 시스템용 FSx를 생성하거나 검색합니다.</block>
@@ -466,7 +462,6 @@
   <block id="3d524a57e639824787f68c6f88019427" category="doc">NetApp Console 에서 FSx for ONTAP 파일 시스템 관리</block>
   <block id="2ec8c048ff53a4cbdbdfc16422f78635" category="paragraph">NetApp Console 에서 FSx for ONTAP 시스템을 생성하거나 검색한 후 볼륨 생성, 스토리지 VM 관리, 데이터 보호, 파일 시스템 관리를 통해 파일 시스템을 관리할 수 있습니다.  콘솔을 사용하면 백업 및 복구, 데이터 분류, 데이터 동기화 등의 기능을 제공하는 데이터 서비스를 사용할 수도 있습니다.</block>
   <block id="dd18b57adc37ce8de554a386a79bc9da" category="section-title">NetApp Workloads를 사용하여 파일 시스템 관리</block>
-  <block id="78b4a72578eb8561c1acd4b3676233e6" category="paragraph">NetApp Console 시스템 페이지에서 FSx for ONTAP 시스템을 열면 NetApp 워크로드로 이동하게 됩니다.  Workloads는 Amazon FSx for NetApp ONTAP 사용하여 주요 워크로드를 설계, 설정 및 운영하기 위해 업계 모범 사례를 활용하는 지능형 최적화 및 자동화 서비스입니다.</block>
   <block id="580649b6592437bd283b108bcef22b7d" category="inline-link">NetApp Workloads를 사용하여 파일 시스템을 관리하는 방법을 알아보세요.</block>
   <block id="14aa34371e663d81da2ce38739cae4bc" category="paragraph"><block ref="14aa34371e663d81da2ce38739cae4bc" category="inline-link-rx"></block></block>
   <block id="9a7d7fe4ea2506122f2a5355c685706e" category="section-title">ONTAP 시스템 관리자를 사용하여 파일 시스템 관리</block>
@@ -488,13 +483,9 @@
   <block id="4445ca9504f7ce2f198006088a6a0db6" category="paragraph">NetApp Data Classification 사용하면 조직의 하이브리드 멀티클라우드에서 데이터를 스캔하고 분류할 수 있습니다.</block>
   <block id="9d79f74e1dd8a7371bdf2a808029dff7" category="inline-link-macro">NetApp Data Classification 시작하기</block>
   <block id="ce269f36061333cca0642955f85d7893" category="paragraph"><block ref="ce269f36061333cca0642955f85d7893" category="inline-link-macro-rx"></block></block>
-  <block id="92b1e4e9a286587a318f472489c82e8e" category="inline-link-macro">NetApp Replication 시작하기</block>
-  <block id="6f9ae9c6f20f6845319426c218c26fa9" category="paragraph"><block ref="6f9ae9c6f20f6845319426c218c26fa9" category="inline-link-macro-rx"></block></block>
   <block id="513c180c5d2a9ee1b68bcde16bb98445" category="paragraph">시작하기 전에 다음 사항을 고려하세요.</block>
-  <block id="28a7654ba403e8d0905895e340495ea0" category="list-text">사용 가능, 생성됨 또는 잘못 구성됨 상태가 아닌 볼륨의 경우 복제가 지원되지 않으며, 이 경우 ONTAP 버전이 호환되지 않습니다.</block>
   <block id="9793db8d97a651febf9f052b60487a84" category="list-text">복제 생성 페이지에서 복제할 소스 볼륨을 선택한 후 *다음*을 클릭합니다.</block>
   <block id="5bc67df36eab9c2f7b3c55d3f683100e" category="list-text">복제 대상에서 다음을 제공합니다.</block>
-  <block id="5b68795341e694ebff565b0ddc6697b3" category="list-text">*대상 이름*: 대상 이름은 캔버스에서 드래그 앤 드롭 작업 중에 이전에 선택되었습니다.</block>
   <block id="562c87a680d962135f8e44bc0d159259" category="list-text">*저장소 VM 이름*: 드롭다운 메뉴에서 저장 VM을 선택합니다.  선택한 스토리지 VM은 이 복제 관계에서 선택한 모든 볼륨의 대상입니다.</block>
   <block id="56aeb18822215ccd01a9293a40c3b44a" category="list-text">*볼륨 이름*: 대상 볼륨 이름은 다음 형식으로 자동 생성됩니다.<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block> .  자동 생성된 볼륨 이름을 사용하거나 다른 볼륨 이름을 입력할 수 있습니다.</block>
   <block id="d3de0d39919d3426b0b013a4457e21ff" category="list-text">*사용 사례*: 복제에 대한 다음 사용 사례 중 하나를 선택하세요.  선택한 사용 사례에 따라 Workload Factory는 모범 사례에 따라 권장 값으로 양식을 채웁니다.  권장되는 값을 수락하거나 양식을 작성하면서 변경할 수 있습니다.</block>
@@ -691,10 +682,6 @@
   <block id="8917975c8444540f1ee9ac0cc5ca14cd" category="paragraph">Workload Factory의 Storage에서 FSx for ONTAP 에 대한 새로운 자격 증명을 추가할 때, 어떤 권한 정책을 부여할지 결정해야 합니다.  FSx for ONTAP 파일 시스템과 같은 AWS 리소스를 검색하려면 _보기, 계획 및 분석_ 권한이 필요합니다.  FSx for ONTAP 파일 시스템을 배포하려면 _파일 시스템 생성 및 삭제_ 권한이 필요합니다.  권한 없이도 FSx for ONTAP 에 대한 기본 작업을 수행할 수 있습니다. <block ref="c61145cf60b5d306fe2b08006e1316ec" category="inline-link-macro-rx"></block>.</block>
   <block id="a7dccda0e2845707c7752e43c8ec99c4" category="inline-link-macro">권한에 대해 알아보세요</block>
   <block id="3accf22a176a1a0029ce245c84e87774" category="list-text">권한 정책을 선택할 수 있는 워크로드 기능의 경우, 해당 자격 증명으로 사용할 수 있는 권한 유형을 선택합니다. <block ref="e5949275d6c97f4d8154c5ed72e8d3a9" category="inline-link-macro-rx"></block>.</block>
-  <block id="6f2324a9ef140c855ee143a6a8f3a97a" category="paragraph">백업 및 재해 복구를 지원하기 위해 데이터를 복제합니다. FSx for ONTAP 파일 시스템과 Cloud Volumes ONTAP 간의 데이터 복제는 NetApp Replication 사용하여 수행할 수 있습니다. 복제를 사용하면 ONTAP 스토리지 시스템 간에 데이터를 복제하여 클라우드 또는 클라우드 간의 백업 및 재해 복구를 지원할 수 있습니다.</block>
-  <block id="9a98b3cdae2120eee0c601730e2d0311" category="paragraph">두 개의 FSx for ONTAP 파일 시스템 간, 그리고 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간의 데이터 복제는 NetApp Console 시스템 페이지에서 가능합니다.</block>
-  <block id="608f85440a5eadcbb4a9ce50bb7dda50" category="list-text">두 FSx for ONTAP 파일 시스템 간 또는 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간에 데이터를 복제하려면 파일 시스템에 연결할 수 있는 콘솔 에이전트를 선택하거나 파일 시스템을 입력하여 링크를 연결해야 합니다.</block>
-  <block id="5f72153c430537b3e27deff7329da0d0" category="list-text">NetApp Console 시스템 페이지에서 소스 FSx for ONTAP 파일 시스템이나 온프레미스 ONTAP 시스템을 대상 FSx for ONTAP 파일 시스템 위로 끌어다 놓고 *복제*를 선택합니다.</block>
   <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">2025년 11월 11일</block>
   <block id="1387404b18ce63590b24c55d54d3ff43" category="paragraph">NetApp Console 시스템 페이지에서 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간의 데이터 복제가 가능합니다.</block>
   <block id="f3bb71c095338a2af8e23c9ae07072bf" category="doc">AWS Lambda 링크를 사용할 때 시스템 관리자를 사용할 수 있습니다.</block>
@@ -729,4 +716,30 @@
   <block id="4f1bd0ace83aba374b7ff69066a53c58" category="inline-xref">보안 그룹 세부 정보</block>
   <block id="e41bac724f43b475f854e3aa1664b8de" category="paragraph">새로운 보안 그룹에 대해서는 다음을 참조하십시오. <block ref="592b894db662c6a6a8229aea3f9a37fa" category="inline-xref-macro-rx"></block> 보안 그룹 프로토콜, 포트 및 역할에 대한 설명은 다음을 참조하십시오.</block>
   <block id="0ebb1380b6abc3243f8c020aa97f25da" category="list-text">파일 시스템을 저장하거나 생성합니다. .결과</block>
+  <block id="e050f36de18bf9eec79dfa74451d3df0" category="doc">Cloud Volumes ONTAP과 FSx for ONTAP 간의 데이터 복제 지원</block>
+  <block id="7736ebd5eab336ae9e7647e31955b0cc" category="paragraph">이제 NetApp Console에서 Cloud Volumes ONTAP 시스템과 FSx for ONTAP 파일 시스템 간의 데이터 복제가 가능합니다.</block>
+  <block id="f319ee95d93a22851e4a5522d2273836" category="paragraph"><block ref="f319ee95d93a22851e4a5522d2273836" category="inline-link-macro-rx"></block></block>
+  <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">이는 시스템에서 생성된 ID로, 사용자의 이메일 주소와 연결됩니다. *NSS 관리* 페이지의 <block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> 메뉴에서 사용자의 이메일 주소를 확인할 수 있습니다.</block>
+  <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">로그인 자격 증명 토큰을 갱신해야 하는 경우 <block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> 메뉴에 *자격 증명 업데이트* 옵션이 있습니다.</block>
+  <block id="e637038fd567011a59fd1e7148bf1b4f" category="paragraph">NetApp Console Systems 페이지에서 FSx for ONTAP 시스템을 열면 NetApp Workloads로 이동합니다. Workloads는 업계 모범 사례를 활용하여 Amazon FSx for NetApp ONTAP를 사용하는 주요 워크로드를 계획, 프로비저닝 및 운영하는 지능형 최적화 및 자동화 서비스입니다.</block>
+  <block id="255ed45341071970ff67a5a94aa268d9" category="doc">NetApp Console에서 FSx for ONTAP 데이터 복제</block>
+  <block id="a374db47ec4f6c8b0b47234eb4f19712" category="paragraph">데이터가 저장된 지역에 재해가 발생할 경우 데이터 손실을 방지하기 위해 데이터를 복제하십시오. 데이터 복제는 FSx for ONTAP 파일 시스템과 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 간에 지원됩니다.</block>
+  <block id="e481f3e818c1bf548144dff8b6c46360" category="paragraph">이 작업은 FSx for ONTAP 파일 시스템, 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 시스템의 소스 볼륨에 대한 복제 관계를 생성합니다.</block>
+  <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">대상 파일 시스템의 복제된 볼륨은 데이터 보호(DP) 볼륨이며 다음 명명 형식을 따릅니다:<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>.</block>
+  <block id="329f7e1b4e95f05da5f05e33ca7af05a" category="list-text">FSx for ONTAP과 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 간에 데이터를 복제하려면 파일 시스템에 연결할 수 있는 Console 에이전트를 선택하거나 파일 시스템을 입력하여 링크를 연결해야 합니다.<block ref="61b7909f43b8222037001004e52dc71c" category="inline-link-macro-rx"></block></block>
+  <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">볼륨 상태가 사용 가능, 생성됨 또는 잘못 구성됨 이외의 상태이거나 ONTAP 버전이 호환되지 않는 경우 복제가 지원되지 않습니다.</block>
+  <block id="96ba6e4ef9df4a236ca029bbe4504ef8" category="list-text">NetApp Console Systems 페이지에서 소스 FSx for ONTAP 파일 시스템, 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 시스템을 대상 FSx for ONTAP 파일 시스템 위로 드래그한 다음 *Replication*을 선택합니다.</block>
+  <block id="af523b162a02562eeefa105871379e55" category="list-text">*대상 이름*: Console Systems 페이지에서 소스 스토리지 시스템을 대상 시스템으로 드래그 앤 드롭할 때 적용한 대상 이름입니다.</block>
+  <block id="837278414ab16e2a74dfc1b2102bcd54" category="list-text">*FSx for ONTAP 파일 시스템*: 대상 FSx for ONTAP 파일 시스템에 대한 자격 증명, 지역 및 FSx for ONTAP 파일 시스템 이름을 선택하십시오.</block>
+  <block id="33d481ba528452e02faf75a2f7350ee4" category="list-text">*S3 액세스 포인트*: 선택적으로 S3 액세스 포인트를 연결하여 AWS S3 API를 통해 NFS 또는 SMB/CIFS 볼륨에 있는 Amazon FSx for NetApp ONTAP 파일 시스템 데이터에 액세스할 수 있습니다. 파일 액세스 유형만 지원됩니다. 다음 세부 정보를 제공하십시오.</block>
+  <block id="41706ab07c21315a8c38172f78132df3" category="list-text">*S3 액세스 포인트 이름*: S3 액세스 포인트의 이름을 입력하십시오.</block>
+  <block id="49abb21c910ce41b88d46bbe2dbec336" category="list-text">*User*: 볼륨에 액세스할 수 있는 기존 사용자를 선택하거나 새 사용자를 생성하십시오.</block>
+  <block id="ce5abe58cc3ff0993fa9e0b2c6ad1340" category="list-text">*사용자 유형*: 사용자 유형으로 *UNIX* 또는 *Windows*를 선택하십시오.</block>
+  <block id="acbb57d15a35fb35e9bb5b030da0d855" category="list-text">*네트워크 구성*: *인터넷* 또는 *Virtual private cloud (VPC)*를 선택하십시오. 선택한 네트워크 유형에 따라 액세스 포인트가 인터넷에서 접근 가능한지 또는 특정 VPC로 제한되는지가 결정됩니다.</block>
+  <block id="6c7b2c1264a7189632e27a922b67c8b7" category="inline-link-macro">Amazon S3 가격 책정 문서</block>
+  <block id="caabcc888415814c29639d089816b5fa" category="list-text">*메타데이터 활성화*: 메타데이터를 활성화하면 S3 액세스 포인트에서 액세스할 수 있는 모든 객체가 포함된 S3 테이블이 생성되며, 이를 감사, 거버넌스, 자동화, 분석 및 최적화에 사용할 수 있습니다. 메타데이터를 활성화하면 추가 AWS 비용이 발생합니다. 자세한 내용은 <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
+  <block id="56573dfcf7d1ac3cf78f2423725ccce8" category="list-text">*S3 액세스 포인트 태그*: 선택적으로 최대 50개의 태그를 추가할 수 있습니다.</block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="section-title">2026년 2월 9일</block>
 </blocks>
