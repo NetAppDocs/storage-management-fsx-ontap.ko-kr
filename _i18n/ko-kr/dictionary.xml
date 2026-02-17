@@ -742,7 +742,6 @@
   <block id="353d7ff4a3d58ad1fe8ef0ad6acab574" category="paragraph">NetApp Workload Factory에서 이제 스토리지 VM 마이그레이션을 지원합니다. 이 기능을 사용하면 온프레미스 ONTAP 시스템 또는 1세대 FSx for ONTAP 파일 시스템에서 2세대 FSx for ONTAP 파일 시스템으로 ONTAP 스토리지 시스템 데이터 및 구성을 마이그레이션할 수 있습니다. 스토리지 VM 데이터와 구성 설정을 복제하여 사용자 및 애플리케이션에 대한 다운타임과 중단을 최소화하면서 새 파일 시스템으로 이동할 수 있습니다.</block>
   <block id="fb2a77c6756f10fcc139a51a83349d7f" category="inline-link-macro">복제 관계 생성</block>
   <block id="33039f37667143e740ae3514cd2b2eea" category="inline-link-macro">스토리지 VM과 복제된 볼륨을 컷오버합니다</block>
-  <block id="e6dbc21f7dea944e6aaaaa4c0d56159d" category="paragraph">이 기능을 사용하려면 <block ref="a00423c4266b8832da7ddbc75235d0cb" category="inline-link-macro-rx"></block> 사용 사례로 *Migration*을 선택하십시오. 마이그레이션 프로세스를 완료하려면 <block ref="4fbf2906eb98c7c630a3491ffc2b8863" category="inline-link-macro-rx"></block> 즉시 데이터와 스토리지 VM 구성 설정을 타겟 FSx for ONTAP 파일 시스템으로 영구적으로 마이그레이션해야 합니다.</block>
   <block id="a26acefb7c797c670c1c39de1408d5d6" category="doc">NetApp Console에서 FSx for ONTAP로 데이터 복제</block>
   <block id="f009487bcbb1861316ff956fce5c3ac3" category="paragraph">스토리지 VM 마이그레이션을 위해서는 복제 관계를 생성한 직후에 컷오버 작업을 완료해야 합니다.</block>
   <block id="1b8db2e8955b459973ea9bfe988b7384" category="paragraph">복제는 지역 재해로부터 데이터를 보호하고 스토리지 VM 마이그레이션을 지원합니다.</block>
@@ -763,8 +762,6 @@
   <block id="04e64253a4742b9534714d0147f467f6" category="paragraph">스토리지 VM 데이터 및 구성 설정을 마이그레이션하려면 두 가지 작업을 완료해야 합니다.</block>
   <block id="ca0c3dd7dca9f636af3209d526098e1e" category="inline-xref">복제 관계를 생성합니다</block>
   <block id="59835e5fb082d065015e2824a515a5b7" category="list-text"><block ref="75331dd4d9fa346165fac294e4e498ee" category="inline-xref-macro-rx"></block>사용 사례로 *Migration*을 선택하고 *Replicate storage VM configuration*을 선택합니다.</block>
-  <block id="db529797694203560d43ab415a6dd52d" category="inline-xref">복제 컷오버</block>
-  <block id="4ff5e77c5ed7650b96676675b9d3eb18" category="list-text"><block ref="76a1fb9977d9fe48f9a1edf04990b3a3" category="inline-xref-macro-rx"></block> 소스 파일 시스템의 데이터 및 구성 설정을 타겟 FSx for ONTAP 파일 시스템으로 영구적으로 마이그레이션합니다.</block>
   <block id="c7e68f063ccf0d86162e4964cc1abdf0" category="paragraph">이 기능을 사용하려면</block>
   <block id="388c14942d26a5119b21a74fab9025a3" category="paragraph">두 FSx for ONTAP 파일 시스템 간, 온프레미스 ONTAP 시스템과 FSx for ONTAP 파일 시스템 간 또는 Cloud Volumes ONTAP과 FSx for ONTAP 파일 시스템 간에 데이터를 복제합니다.</block>
   <block id="0aa7d11dc16260c47faf9d5b0b642366" category="paragraph">시작하기 전에 다음 요구 사항을 검토하십시오.</block>
@@ -792,4 +789,6 @@
   <block id="7b626244b5e77ec8426207a79760602c" category="inline-link-macro">계층화 정책을 수정합니다</block>
   <block id="cdefdf2807f30b87eddcd4e17418772a" category="paragraph">전환이 완료되면 소스 볼륨이 삭제되고 타겟 볼륨은 읽기/쓰기 가능 상태가 됩니다. 전환 후 타겟 볼륨에 대해 <block ref="16bce6d1c351d0b9dcc239287b000317" category="inline-link-macro-rx"></block>할 수 있습니다.</block>
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026년 2월 16일</block>
+  <block id="498aaff0cc400a96455ebb5b21ae7ffa" category="paragraph">이 기능을 사용하려면 <block ref="a00423c4266b8832da7ddbc75235d0cb" category="inline-link-macro-rx"></block> 사용 사례로 *Migration*을 선택하십시오. 마이그레이션 프로세스를 완료하려면 <block ref="26b59663dcf673cfcdf7f1e6b23597f9" category="inline-link-macro-rx"></block> 즉시 데이터와 스토리지 VM 구성 설정을 타겟 FSx for ONTAP 파일 시스템으로 영구적으로 마이그레이션해야 합니다.</block>
+  <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block> 소스 파일 시스템의 데이터 및 구성 설정을 타겟 FSx for ONTAP 파일 시스템으로 영구적으로 마이그레이션합니다.</block>
 </blocks>
