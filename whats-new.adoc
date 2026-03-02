@@ -18,6 +18,16 @@ FSx for ONTAP 의 새로운 기능을 알아보세요.
 
 
 
+== 2026년 3월 1일
+
+
+
+=== NetApp Console 에이전트 상태는 FSx for ONTAP 파일 시스템에 대해 지원됩니다
+
+NetApp Console에서 이제 워크로드의 FSx for ONTAP 파일 시스템에 대한 Console 에이전트 상태를 표시합니다. 이 상태는 에이전트가 실행 중이고 FSx for ONTAP 파일 시스템과 통신할 수 있는지 여부를 나타냅니다. 이 정보를 통해 연결 문제를 해결할 수 있습니다.
+
+
+
 == 2026년 2월 16일
 
 

@@ -791,4 +791,7 @@
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026년 2월 16일</block>
   <block id="498aaff0cc400a96455ebb5b21ae7ffa" category="paragraph">이 기능을 사용하려면 <block ref="a00423c4266b8832da7ddbc75235d0cb" category="inline-link-macro-rx"></block> 사용 사례로 *Migration*을 선택하십시오. 마이그레이션 프로세스를 완료하려면 <block ref="26b59663dcf673cfcdf7f1e6b23597f9" category="inline-link-macro-rx"></block> 즉시 데이터와 스토리지 VM 구성 설정을 타겟 FSx for ONTAP 파일 시스템으로 영구적으로 마이그레이션해야 합니다.</block>
   <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block> 소스 파일 시스템의 데이터 및 구성 설정을 타겟 FSx for ONTAP 파일 시스템으로 영구적으로 마이그레이션합니다.</block>
+  <block id="3acecbd4317d789f549785c17e6afb2c" category="doc">NetApp Console 에이전트 상태는 FSx for ONTAP 파일 시스템에 대해 지원됩니다</block>
+  <block id="5088f4e07e6650891b34cd38ec19877b" category="paragraph">NetApp Console에서 이제 워크로드의 FSx for ONTAP 파일 시스템에 대한 Console 에이전트 상태를 표시합니다. 이 상태는 에이전트가 실행 중이고 FSx for ONTAP 파일 시스템과 통신할 수 있는지 여부를 나타냅니다. 이 정보를 통해 연결 문제를 해결할 수 있습니다.</block>
+  <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">2026년 3월 1일</block>
 </blocks>
