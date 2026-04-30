@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: start/concept-fsx-aws.html 
-keywords: Amazon FSx for NetApp ONTAP, volumes, aws, access key, secret key, cloud manager, NetApp Console, bluexp 
+keywords: Amazon FSx for NetApp ONTAP, volumes, aws, access key, secret key, cloud manager, NetApp Console 
 summary: Amazon FSx for NetApp ONTAP 은 고객이 NetApp의 ONTAP 스토리지 운영 체제로 구동되는 파일 시스템을 시작하고 실행할 수 있도록 하는 완전 관리형 서비스입니다. 
 ---
 = Amazon FSx for NetApp ONTAP 에 대해 알아보세요
@@ -26,7 +26,7 @@ NetApp Console 엔터프라이즈급 온프레미스 및 클라우드 환경 전
 
 NetApp Console 사용하려면 라이선스나 구독이 필요하지 않으며, 스토리지 시스템이나 NetApp 데이터 서비스에 대한 연결을 보장하기 위해 클라우드에 Console 에이전트를 배포해야 할 때만 요금이 부과됩니다. 그러나 콘솔에서 액세스할 수 있는 일부 NetApp 데이터 서비스는 라이선스 기반이거나 구독 기반입니다.
 
-자세히 알아보세요 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console"] .
+ https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"]에 대해 자세히 알아보십시오.
 
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: requirements/task-setting-up-permissions-fsx.html 
-keywords: fsx for ontap, iam, user role, permissions, credentials, bluexp 
+keywords: fsx for ontap, iam, user role, permissions, credentials 
 summary: FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp Console 에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp Console 에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다. 
 ---
 = FSx for ONTAP 에 대한 권한 설정

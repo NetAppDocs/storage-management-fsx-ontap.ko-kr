@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/task-remove-filesystem.html 
-keywords: amazon fsx for netapp ontap, fsx for ontap, fsx, remove fsx for ontap file system, remove file system, file system, disassociate file system, bluexp, NetApp Console 
+keywords: amazon fsx for netapp ontap, fsx for ontap, fsx, remove fsx for ontap file system, remove file system, file system, disassociate file system, NetApp Console 
 summary: NetApp Console 에서 프로젝트에서 FSx for ONTAP 파일 시스템을 제거합니다. 
 ---
 = 프로젝트에서 FSx for ONTAP 파일 시스템 제거
