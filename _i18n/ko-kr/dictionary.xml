@@ -91,9 +91,6 @@
   <block id="bd88f5d8a1d52ec005c5976780f565ab" category="summary">FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp Console 에서 AWS 자격 증명을 추가해야 합니다. 이를 위해 NetApp Console 에서 FSx for ONTAP 시스템을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.</block>
   <block id="8fad3d94a3385eeb6406613f49896cdd" category="doc">FSx for ONTAP 에 대한 권한 설정</block>
   <block id="13f9bf1ee7de953172b557e8312ec6e4" category="section-title">AWS 자격 증명이 필요한 이유</block>
-  <block id="6ac7ea2b85486160098bf7719b2a2efd" category="paragraph">NetApp Console 에서 FSx for ONTAP 시스템을 만들고 관리하려면 AWS 자격 증명이 필요합니다.  새로운 AWS 자격 증명을 만들거나 기존 조직에 AWS 자격 증명을 추가할 수 있습니다.  자격 증명은 NetApp Console 에서 AWS 클라우드 환경 내의 리소스와 프로세스를 관리하는 데 필요한 권한을 제공합니다.</block>
-  <block id="6b117b21bf1afabb5a312619e535e582" category="paragraph">자격 증명과 권한은 NetApp Workload Factory 통해 관리됩니다.  Workload Factory는 사용자가 Amazon FSx for NetApp ONTAP 파일 시스템을 사용하여 워크로드를 최적화하는 데 도움이 되도록 설계된 수명 주기 관리 플랫폼입니다.  NetApp Console Workload Factory와 동일한 AWS 자격 증명 및 권한 세트를 사용합니다.</block>
-  <block id="2eeecbf656db25d1c621552e4d4ca863" category="paragraph">Workload Factory 인터페이스는 FSx for ONTAP 사용자에게 스토리지, VMware, 데이터베이스, GenAI 등의 워크로드 기능을 활성화하고 워크로드에 대한 권한을 선택할 수 있는 옵션을 제공합니다.  _Storage_는 Workload Factory의 스토리지 관리 기능이며, FSx for ONTAP 파일 시스템을 생성하고 관리하기 위해 자격 증명을 활성화하고 추가해야 하는 유일한 기능입니다.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="section-title">이 작업에 관하여</block>
   <block id="d396bcde35d40ba871e0e0c3704be40c" category="paragraph">새 AWS 자격 증명과 기존 AWS 자격 증명은 *자격 증명* 페이지의 관리 메뉴에서 볼 수 있습니다.</block>
   <block id="b34e9b22e049f50831f2226787b16920" category="inline-image-macro">NetApp Console 관리 메뉴에서 강조 표시된 관리 메뉴와 자격 증명 옵션의 스크린샷입니다.</block>
@@ -102,56 +99,40 @@
   <block id="ebb29cdb5a9f5368e3f445c808c91552" category="list-text">*수동으로*: Workload Factory에서 자격 증명을 추가하는 동안 AWS 계정에서 IAM 정책과 IAM 역할을 생성합니다.</block>
   <block id="1a04b786edc8b8251d22307b11cb2a8d" category="list-text">*자동으로*: 권한에 대한 최소한의 정보를 수집한 다음 CloudFormation 스택을 사용하여 자격 증명에 대한 IAM 정책과 역할을 만듭니다.</block>
   <block id="3e704746794b6c6da13402ca9df54660" category="section-title">계정에 자격 증명을 수동으로 추가</block>
-  <block id="0436081f5e755485ef83cd5e2cff7957" category="paragraph">NetApp Console 에 AWS 자격 증명을 수동으로 추가하여 고유한 워크로드를 실행하는 데 사용할 AWS 리소스를 관리하는 데 필요한 권한을 계정에 부여할 수 있습니다.  추가하는 각 자격 증명 세트에는 사용하려는 워크로드 기능에 따라 하나 이상의 IAM 정책과 계정에 할당된 IAM 역할이 포함됩니다.</block>
   <block id="ea106b6fa0504ddb53d4506dcd8e7755" category="paragraph">자격 증명을 만드는 과정은 세 단계로 구성됩니다.</block>
   <block id="b4968210d824a9808cbfac903e6a2461" category="list-text">사용하려는 서비스와 권한 수준을 선택한 다음 AWS Management Console에서 IAM 정책을 만듭니다.</block>
   <block id="3b022a10e2c2436d37f59e86b18713f7" category="list-text">AWS Management Console에서 IAM 역할을 만듭니다.</block>
-  <block id="d134293f0e79557d8f817837f2ffd628" category="list-text">NetApp Console 의 워크로드에서 이름을 입력하고 자격 증명을 추가합니다.</block>
-  <block id="d80261d8e1789ada875dd9514c24b8fe" category="paragraph">FSx for ONTAP 작업 환경을 만들거나 관리하려면 NetApp Console 에서 Workloads에 AWS 자격 증명을 추가해야 합니다. 이를 위해 Workloads에 FSx for ONTAP 작업 환경을 만드는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공해야 합니다.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">시작하기 전에</block>
   <block id="36a8744ea109fc8ef18fd018d5d97aa0" category="paragraph">AWS 계정에 로그인하려면 자격 증명이 필요합니다.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
   <block id="34ba06ab4c0d52cdf7ed2fa3961defbb" category="list-text">NetApp Console 메뉴에서 *관리*를 선택한 다음 *자격 증명*을 선택합니다.</block>
   <block id="1e34a5d86e7e16c6c442d1977307e2d7" category="list-text">*조직 자격 증명* 페이지에서 *자격 증명 추가*를 선택합니다.</block>
   <block id="fa6452c77972d8b4daaf92d6a7d82d49" category="list-text">*Amazon Web Services*를 선택한 다음 *FSx for ONTAP*를 선택하고 *다음*을 선택합니다.</block>
-  <block id="3e641202d01950b463305362526bd0b5" category="paragraph">이제 NetApp Workloads의 *자격 증명 추가* 페이지에 있습니다.</block>
   <block id="c8df78ded4cea0598f7679f11a3c3246" category="list-text">*수동으로 추가*를 선택한 다음 아래 단계에 따라 _권한 구성_ 아래의 세 섹션을 작성하세요.</block>
   <block id="facff49e2bd72676ffc323376c6f7c86" category="section-title">1단계: 스토리지 용량을 선택하고 IAM 정책을 만듭니다.</block>
-  <block id="643bb3986a2755c5582d9f82862ff934" category="paragraph">이 섹션에서는 자격 증명의 일부로 관리할 저장 용량과 저장에 대해 활성화된 권한을 선택합니다.  데이터베이스, GenAI 또는 VMware와 같은 다른 워크로드를 선택할 수도 있습니다.  선택을 마치면 Codebox에서 선택한 각 워크로드에 대한 정책 권한을 복사하여 AWS 계정 내의 AWS Management Console에 추가하여 정책을 생성해야 합니다.</block>
-  <block id="eb73cd2a4bbc3dbb4bbab5f5a9b6fb8d" category="list-text">*정책 만들기* 섹션에서 이러한 자격 증명에 포함하려는 각 워크로드 기능을 활성화합니다.  *저장소*를 활성화하여 파일 시스템을 만들고 관리합니다.</block>
   <block id="3b9b789374908017040d97f81eb4008d" category="paragraph">나중에 추가 기능을 추가할 수 있으므로 현재 배포하고 관리하려는 워크로드만 선택하면 됩니다.</block>
-  <block id="04c38dfa84592feebab3e30dfe4a019a" category="list-text">선택 사항: 워크로드 작업을 완료하는 데 필요한 AWS 계정 권한이 있는지 확인하려면 *자동 권한 확인 사용*을 선택합니다.  체크를 활성화하면 다음이 추가됩니다.<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block> 귀하의 허가 정책에 따라.  이 허가의 목적은 허가를 확인하는 것뿐입니다.  자격 증명을 추가한 후에는 권한을 제거할 수 있지만, 부분적으로 성공적인 작업에 대한 리소스 생성을 방지하고 필요한 수동 리소스 정리 작업을 하지 않아도 되도록 권한을 유지하는 것이 좋습니다.</block>
   <block id="6d45b51df5e4b4d742aed3a012be7ece" category="list-text">Codebox 창에서 첫 번째 IAM 정책에 대한 권한을 복사합니다.</block>
   <block id="d9951e6a22fb7f7d403d017e5b8ef9c6" category="list-text">다른 브라우저 창을 열고 AWS Management Console에서 AWS 계정에 로그인합니다.</block>
   <block id="0545945650ae73f856cfac5d203df5f5" category="list-text">IAM 서비스를 열고 *정책* &gt; *정책 만들기*를 선택합니다.</block>
-  <block id="27b582bcbcca0fd418f9f9f855710d0a" category="list-text">파일 유형으로 JSON을 선택하고, 3단계에서 복사한 권한을 붙여넣은 후 *다음*을 선택합니다.</block>
   <block id="e8ea9480c70ef3b586604a914898eff0" category="list-text">정책 이름을 입력하고 *정책 만들기*를 선택합니다.</block>
   <block id="c240537b83fe8c59f5bb758e5c166662" category="list-text">1단계에서 여러 워크로드 기능을 선택한 경우 이 단계를 반복하여 각 워크로드 권한 집합에 대한 정책을 만듭니다.</block>
   <block id="eca99ccb2e04bfcfc06a9cb5860e53a9" category="section-title">2단계: 정책을 사용하는 IAM 역할 만들기</block>
   <block id="30551002ceb8abd5af0ee8907423b553" category="paragraph">이 섹션에서는 Workload Factory가 방금 만든 권한과 정책을 포함하는 IAM 역할을 설정합니다.</block>
   <block id="c0a8070d8176ef21fdf6bc0d6b6833c9" category="list-text">AWS Management Console에서 *역할 &gt; 역할 생성*을 선택합니다.</block>
   <block id="e506de832b98c2693eb3f400ef0722c0" category="list-text">*신뢰할 수 있는 엔터티 유형*에서 *AWS 계정*을 선택합니다.</block>
-  <block id="1da59cee8d6ecfd86c9da2dfa8174268" category="list-text">*다른 AWS 계정*을 선택하고 워크로드 사용자 인터페이스에서 FSx for ONTAP 워크로드 관리에 대한 계정 ID를 복사하여 붙여넣습니다.</block>
-  <block id="32e4328757960c9f593dd2343d2aeb43" category="list-text">*필수 외부 ID*를 선택하고 워크로드 사용자 인터페이스에서 외부 ID를 복사하여 붙여넣습니다.</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">*다음*을 선택하세요.</block>
   <block id="552a0f683211339f8f7517a1d4fc804d" category="list-text">권한 정책 섹션에서 이전에 정의한 모든 정책을 선택하고 *다음*을 선택합니다.</block>
   <block id="eb940e2ee0ec63786b166a518db881df" category="list-text">역할의 이름을 입력하고 *역할 만들기*를 선택합니다.</block>
   <block id="38743fa9100c2dfb5d984fc45fed3de7" category="list-text">역할 ARN을 복사합니다.</block>
-  <block id="1529f245482821144ee904a44a0a11d5" category="list-text">워크로드 자격 증명 추가 페이지로 돌아가서 *역할 만들기* 섹션을 확장하고 _역할 ARN_ 필드에 ARN을 붙여넣습니다.</block>
   <block id="c66b75fd4a0a3e3eff2094b970b0b897" category="section-title">3단계: 이름을 입력하고 자격 증명을 추가합니다.</block>
-  <block id="61d956e6854ab93a5881af8294509b97" category="paragraph">마지막 단계는 워크로드에 자격 증명의 이름을 입력하는 것입니다.</block>
-  <block id="0069f72adf3b3447ce31c42959992388" category="list-text">워크로드 자격 증명 추가 페이지에서 *자격 증명 이름*을 확장합니다.</block>
   <block id="a961eea4fc631a6689d895b16be74287" category="list-text">이러한 자격 증명에 사용할 이름을 입력하세요.</block>
   <block id="027a8d7e43e765637f8ef1ae06ce3700" category="list-text">*추가*를 선택하여 자격 증명을 만듭니다.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">결과</block>
-  <block id="7c3575dedda79e816797014fae96eda5" category="paragraph">자격 증명은 자격 증명 페이지에서 생성되어 볼 수 있습니다.  이제 FSx for ONTAP 작업 환경을 만들 때 자격 증명을 사용할 수 있습니다.  필요할 때마다 자격 증명의 이름을 바꾸거나 NetApp Console 에서 자격 증명을 제거할 수 있습니다.</block>
   <block id="5512d35e832df0796cf2e9bbfc4ef8e7" category="section-title">CloudFormation을 사용하여 계정에 자격 증명 추가</block>
-  <block id="c98e309d126aa2b94ba53d6b620ea05f" category="paragraph">AWS CloudFormation 스택을 사용하여 워크로드에 AWS 자격 증명을 추가할 수 있습니다. 사용하려는 워크로드 기능을 선택한 다음 AWS 계정에서 AWS CloudFormation 스택을 시작합니다.  CloudFormation은 선택한 워크로드 기능에 따라 IAM 정책과 IAM 역할을 생성합니다.</block>
   <block id="f48f7e164b0415ad7634845f95eb03e1" category="list-text">CloudFormation 스택을 사용하여 자격 증명을 추가하는 경우 AWS 계정에 다음과 같은 권한이 있어야 합니다.</block>
   <block id="8c4d8d6ab75350dc5209e22fd9107977" category="list-text">*자격 증명 추가*를 선택합니다.</block>
   <block id="4454b47599abbe986fcc1d78e9d5c3d5" category="list-text">*AWS CloudFormation을 통해 추가*를 선택합니다.</block>
   <block id="3534f18786c0daea2192750276eda6f0" category="list-text">*정책 만들기*에서 자격 증명에 포함하려는 각 워크로드 기능을 활성화하고 각 워크로드에 대한 권한 수준을 선택합니다.</block>
-  <block id="c3c7c9c146408a0ee564eedba4821f52" category="list-text">선택 사항: 워크로드 작업을 완료하는 데 필요한 AWS 계정 권한이 있는지 확인하려면 *자동 권한 확인 사용*을 선택합니다.  체크를 활성화하면 다음이 추가됩니다.<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block> 귀하의 허가 정책에 대한 허가.  이 허가의 목적은 허가를 확인하는 것뿐입니다.  자격 증명을 추가한 후에는 권한을 제거할 수 있지만, 부분적으로 성공적인 작업에 대한 리소스 생성을 방지하고 필요한 수동 리소스 정리 작업을 하지 않아도 되도록 권한을 유지하는 것이 좋습니다.</block>
   <block id="fa7fbda40357a3d9d2b6286d82c737a8" category="list-text">*자격 증명 이름*에 해당 자격 증명에 사용할 이름을 입력합니다.</block>
   <block id="55af5349296de9cc03eea75eb011b988" category="list-text">AWS CloudFormation에서 자격 증명을 추가합니다.</block>
   <block id="a83b560232f912e9085bc49e52b3b48b" category="list-text">*추가*를 선택하거나 *CloudFormation으로 리디렉션*을 선택하면 CloudFormation으로 리디렉션 페이지가 표시됩니다.</block>
@@ -225,7 +206,6 @@
   <block id="cdbd850b4617286bd0b9fb37c42ae915" category="paragraph">NetApp Console FSx for ONTAP 파일 시스템을 만들고 관리하는 데 필요한 권한을 제공하려면 AWS 자격 증명을 추가해야 합니다.  _읽기 전용_ 권한과 _읽기/쓰기_ 권한 중에서 선택할 수 있습니다.</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">둘</block>
   <block id="535ffe13505ca1d9de92e311b54fa3ec" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>선택 사항: 콘솔 에이전트 또는 링크 만들기</block>
-  <block id="c970b62fa7cf5f61b27d9598445ae512" category="paragraph">NetApp Console 에서 일부 관리 작업을 수행하려면 콘솔 에이전트나 NetApp 워크로드 링크가 필요합니다.  _콘솔 에이전트_는 FSx for ONTAP 파일 시스템을 관리하기 위해 VPC에 배포하는 가상 머신입니다.  _링크_는 AWS Lambda를 활용하여 FSx for ONTAP 파일 시스템에 대한 신뢰 관계와 연결을 구축합니다.</block>
   <block id="46b0eea407e7bf43d175b724bd9af392" category="inline-link-macro">FSx for ONTAP 관리에 콘솔 에이전트 또는 링크가 필요한 경우 알아보기</block>
   <block id="7c8b4c1b1afb0bd40b9326ab59c69657" category="list-text"><block ref="7c8b4c1b1afb0bd40b9326ab59c69657" category="inline-link-macro-rx"></block></block>
   <block id="cf4709f0b7fac7a7e67b98f5cea5e8a8" category="inline-link">AWS에서 콘솔 에이전트를 만드는 방법을 알아보세요</block>
@@ -459,9 +439,6 @@
   <block id="82d112df39f74e9fcdd66e0e6d5aa12b" category="summary">NetApp Console 에서 FSx for ONTAP 시스템을 생성하거나 검색한 후에는 파일 시스템을 관리하고 백업 및 복구와 같은 기능을 제공하는 NetApp 데이터 서비스를 사용할 수 있습니다.</block>
   <block id="3d524a57e639824787f68c6f88019427" category="doc">NetApp Console 에서 FSx for ONTAP 파일 시스템 관리</block>
   <block id="2ec8c048ff53a4cbdbdfc16422f78635" category="paragraph">NetApp Console 에서 FSx for ONTAP 시스템을 생성하거나 검색한 후 볼륨 생성, 스토리지 VM 관리, 데이터 보호, 파일 시스템 관리를 통해 파일 시스템을 관리할 수 있습니다.  콘솔을 사용하면 백업 및 복구, 데이터 분류, 데이터 동기화 등의 기능을 제공하는 데이터 서비스를 사용할 수도 있습니다.</block>
-  <block id="dd18b57adc37ce8de554a386a79bc9da" category="section-title">NetApp Workloads를 사용하여 파일 시스템 관리</block>
-  <block id="580649b6592437bd283b108bcef22b7d" category="inline-link">NetApp Workloads를 사용하여 파일 시스템을 관리하는 방법을 알아보세요.</block>
-  <block id="14aa34371e663d81da2ce38739cae4bc" category="paragraph"><block ref="14aa34371e663d81da2ce38739cae4bc" category="inline-link-rx"></block></block>
   <block id="9a7d7fe4ea2506122f2a5355c685706e" category="section-title">ONTAP 시스템 관리자를 사용하여 파일 시스템 관리</block>
   <block id="be0bf2e3af6b03378bb493466f3c335f" category="section-title">Amazon CloudFormation을 사용하여 파일 시스템 관리</block>
   <block id="e211b2db96a2f5b2b2868517a76988c8" category="paragraph">Amazon CloudFormation을 사용하여 FSx for ONTAP 파일 시스템 리소스(볼륨, CIFS 공유, 내보내기 정책 등)를 프로비저닝하고 관리할 수 있습니다.</block>
@@ -720,7 +697,6 @@
   <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">이는 시스템에서 생성된 ID로, 사용자의 이메일 주소와 연결됩니다. *NSS 관리* 페이지의 <block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> 메뉴에서 사용자의 이메일 주소를 확인할 수 있습니다.</block>
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">로그인 자격 증명 토큰을 갱신해야 하는 경우 <block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> 메뉴에 *자격 증명 업데이트* 옵션이 있습니다.</block>
-  <block id="e637038fd567011a59fd1e7148bf1b4f" category="paragraph">NetApp Console Systems 페이지에서 FSx for ONTAP 시스템을 열면 NetApp Workloads로 이동합니다. Workloads는 업계 모범 사례를 활용하여 Amazon FSx for NetApp ONTAP를 사용하는 주요 워크로드를 계획, 프로비저닝 및 운영하는 지능형 최적화 및 자동화 서비스입니다.</block>
   <block id="a374db47ec4f6c8b0b47234eb4f19712" category="paragraph">데이터가 저장된 지역에 재해가 발생할 경우 데이터 손실을 방지하기 위해 데이터를 복제하십시오. 데이터 복제는 FSx for ONTAP 파일 시스템과 온프레미스 ONTAP 시스템 또는 Cloud Volumes ONTAP 간에 지원됩니다.</block>
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">대상 파일 시스템의 복제된 볼륨은 데이터 보호(DP) 볼륨이며 다음 명명 형식을 따릅니다:<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>.</block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">볼륨 상태가 사용 가능, 생성됨 또는 잘못 구성됨 이외의 상태이거나 ONTAP 버전이 호환되지 않는 경우 복제가 지원되지 않습니다.</block>
@@ -828,4 +804,27 @@
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">관련 정보</block>
   <block id="aadb221d48ad5912d16ae10d1a2f7515" category="inline-link-macro">계층화 정책 수정</block>
   <block id="fc36a9d66532e35056304d11de6f9ae5" category="paragraph"><block ref="aac2c10b4c8f9f85b27f6266bbf93855" category="inline-link-macro-rx"></block> 전환 후 타겟 볼륨에 대해.</block>
+  <block id="e53b35d192f3743794b3e37a24c7e92c" category="paragraph">NetApp Console에서 FSx for ONTAP 시스템을 생성하고 관리하려면 AWS 자격 증명이 필요합니다. 새 자격 증명을 생성하거나 기존 조직에 추가할 수 있습니다. 자격 증명을 사용하면 NetApp Console에서 AWS 리소스를 관리할 수 있습니다.</block>
+  <block id="1817603d4a287805c966d1fe5b8286a1" category="paragraph">자격 증명 및 권한은 NetApp Workload Factory에서 관리됩니다. Workload Factory는 Amazon FSx for NetApp ONTAP 파일 시스템에서 실행되는 VMware, EDA 및 데이터베이스 워크로드를 관리하고 개선하는 데 도움이 되도록 설계된 수명 주기 관리 플랫폼입니다. NetApp Console과 Workload Factory는 동일한 AWS 자격 증명 및 권한 세트를 사용합니다. _Storage_는 Workload Factory의 스토리지 관리 기능이며, FSx for ONTAP 파일 시스템을 생성하고 관리하려면 이 기능만 활성화하고 자격 증명을 추가하면 됩니다.</block>
+  <block id="063ec75c7bab602d59faa10e680ab3e3" category="paragraph">NetApp Console에 AWS 자격 증명을 수동으로 추가하여 사용하려는 워크로드 관리 기능에 대한 권한과 계정에 할당된 IAM 역할을 계정에 부여할 수 있습니다.</block>
+  <block id="4d8bf726f3b794264b3256fbe87868fa" category="list-text">NetApp Console에서 이름을 입력하고 자격 증명을 추가하세요.</block>
+  <block id="cd40e62e43c75b6162edf45210b3f179" category="paragraph">FSx for ONTAP 파일 시스템을 생성하거나 관리하려면 Workload Factory에 FSx for ONTAP 파일 시스템을 생성하는 데 필요한 권한을 부여하는 IAM 역할의 ARN을 제공하여 NetApp Console에 AWS 자격 증명을 추가해야 합니다.</block>
+  <block id="8c95ad8db882d1d7fcf92ae8b84c6845" category="paragraph">이 섹션에서는 이러한 자격 증명으로 관리할 스토리지 관리 기능과 스토리지에 대한 권한을 선택합니다. 데이터베이스, GenAI 또는 VMware와 같은 다른 워크로드를 선택할 수도 있습니다. 선택을 완료한 후에는 코드박스에서 선택한 각 워크로드에 대한 정책 권한을 복사하여 AWS 계정의 AWS Management Console에 추가하여 정책을 생성해야 합니다.</block>
+  <block id="e30bfd182053376b581cf82c64ede77d" category="list-text">*권한 정책 생성* 섹션에서 이러한 자격 증명에 포함할 각 워크로드 기능을 활성화합니다. 파일 시스템을 생성하고 관리하려면 *Storage*를 활성화하십시오.</block>
+  <block id="8805ce96ecd4d8940d5b991a7d94bf68" category="list-text">선택 사항: 워크로드 작업을 완료하는 데 필요한 AWS 계정 권한이 있는지 확인하려면 *자동 권한 확인 사용*을 선택하세요. 이 확인을 활성화하면 권한 정책에 <block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block>이(가) 추가됩니다. 이 권한은 권한 확인 용도로만 사용됩니다. 자격 증명을 추가한 후 이 권한을 제거할 수 있지만, 일부 단계가 실패할 경우 리소스 생성을 방지하고 수동 정리를 방지하기 위해 유지하는 것이 좋습니다.</block>
+  <block id="3fe356da6fc520062babda17163306d2" category="list-text">파일 형식으로 JSON을 선택하고 4단계에서 복사한 권한을 붙여넣은 다음 *Next*를 선택합니다.</block>
+  <block id="c053668d209688648f802b5a723845af" category="list-text">*다른 AWS 계정*을 선택하고 Console 사용자 인터페이스에서 ONTAP 워크로드 관리를 위한 FSx의 계정 ID를 복사하여 붙여 넣습니다.</block>
+  <block id="14ab243937003284978a33448a61431a" category="list-text">*필수 외부 ID*를 선택하고 외부 ID를 복사하여 NetApp Console 사용자 인터페이스에 붙여넣습니다.</block>
+  <block id="b808e215c64681ee6fbd36051127b831" category="list-text">NetApp Console의 자격 증명 추가 페이지로 돌아가서 *역할 생성* 섹션을 확장하고 _역할 ARN_ 필드에 ARN을 붙여넣습니다.</block>
+  <block id="8f1c8f28b91d5f4ff27e6e559ba71303" category="paragraph">마지막 단계는 자격 증명에 사용할 이름을 입력하는 것입니다.</block>
+  <block id="0565d628b6ab1a709a696106d2ac6f20" category="list-text">자격 증명 추가 페이지에서 *자격 증명 이름*을 확장합니다.</block>
+  <block id="c662aa264d68eeeb7d23abd07aa8e1d6" category="paragraph">Console에서 자격 증명을 생성하고 자격 증명 페이지에 표시합니다. NetApp Console에서 자격 증명을 사용, 이름 변경 또는 삭제할 수 있습니다.</block>
+  <block id="4c78422e6621ed7256b5d5ef117b7236" category="paragraph">AWS CloudFormation 스택을 사용하여 NetApp Workload Factory에 AWS 자격 증명을 추가할 수 있으며, 사용하려는 워크로드 기능을 선택한 후 AWS 계정에서 AWS CloudFormation 스택을 실행하면 됩니다. CloudFormation은 선택한 워크로드 기능을 기반으로 IAM 정책과 IAM 역할을 생성합니다.</block>
+  <block id="723d26dc27749569a11820256cc91716" category="paragraph">현재 NetApp Workload Factory의 *자격 증명 추가* 페이지에 있습니다.</block>
+  <block id="1a3b59845cddbc873db73733ef4cd05c" category="list-text">선택 사항: 워크로드 작업을 완료하는 데 필요한 AWS 계정 권한이 있는지 확인하려면 *자동 권한 확인 사용*을 선택하세요. 이 확인을 활성화하면<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block> 권한이 권한 정책에 추가됩니다. 이 권한은 권한 확인 용도로만 사용됩니다. 자격 증명을 추가한 후 이 권한을 제거할 수 있지만, 일부 단계가 실패할 경우 리소스 생성을 방지하고 수동 정리를 방지하기 위해 권한을 유지하는 것이 좋습니다.</block>
+  <block id="75ae3f41f6146fb82090917121efc404" category="paragraph">NetApp Console에서 일부 관리 작업을 수행하려면 Console 에이전트 또는 NetApp Workload Factory 링크가 필요합니다. _Console 에이전트_는 VPC에 배포하여 FSx for ONTAP 파일 시스템을 관리하는 가상 머신입니다. _링크_는 AWS Lambda를 활용하여 FSx for ONTAP 파일 시스템과의 신뢰 관계 및 연결을 설정합니다.</block>
+  <block id="7981c969ad619b2f30aad726503d9af3" category="section-title">NetApp Workload Factory를 사용하여 파일 시스템을 관리합니다</block>
+  <block id="77d0d30e7a54331923339cd4b481f87a" category="paragraph">NetApp Console 시스템 페이지에서 FSx for ONTAP 시스템을 열면 NetApp Workload Factory로 이동합니다. NetApp Workload Factory는 업계 모범 사례를 활용하여 Amazon FSx for NetApp ONTAP을 사용해 주요 워크로드를 계획, 프로비저닝 및 운영하는 지능형 최적화 및 자동화 서비스입니다.</block>
+  <block id="bd794697f728318e3eb013d378f93756" category="inline-link">NetApp Workload Factory를 사용하여 파일 시스템을 관리하는 방법을 알아보세요</block>
+  <block id="7ccf7420ef554de52729730c921b7ed6" category="paragraph"><block ref="7ccf7420ef554de52729730c921b7ed6" category="inline-link-rx"></block></block>
 </blocks>
