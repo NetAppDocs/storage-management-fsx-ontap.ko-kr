@@ -29,7 +29,7 @@ summary: 예기치 못한 재해 발생 시 데이터 손실을 방지하기 위
 
 [NOTE]
 ====
-소스(읽기/쓰기) 볼륨 하나 또는 데이터 보호(DP) 볼륨 하나를 복제할 수 있습니다. 계단식 복제는 지원되지만 세 번째 홉은 지원되지 않습니다. link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["캐스케이딩 복제"^]에 대해 자세히 알아보십시오.
+소스(읽기/쓰기) 볼륨 하나 또는 데이터 보호(DP) 볼륨 하나를 복제할 수 있습니다. 계단식 복제는 지원되지만 세 번째 홉은 지원되지 않습니다. link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["캐스케이딩 복제"^]에 대해 자세히 알아보십시오.
 
 ====
 
