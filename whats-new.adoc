@@ -21,7 +21,12 @@ FSx for ONTAP 의 새로운 기능을 알아보세요.
 [[15-july-2026]]
 == 2026년 7월 15일
 
-해결되지 않은 지시문 <stdin> - include::.._whatsnew/2026-07-15.adoc[]
+
+
+[[genai-workload-removal-from-workloads-in-the-netapp-console]]
+=== NetApp Console의 워크로드에서 GenAI 워크로드 제거
+
+NetApp Console의 워크로드에서 GenAI 워크로드가 제거되었습니다.
 
 
 
