@@ -18,6 +18,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["A
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 Amazon FSx for NetApp ONTAP 관리는 NetApp Console 통해 액세스할 수 있습니다.
@@ -30,6 +31,7 @@ NetApp Console 사용하려면 라이선스나 구독이 필요하지 않으며,
 
 
 
+[[using-fsx-for-ontap-from-the-netapp-console]]
 == NetApp Console 에서 FSx for ONTAP 사용
 
 NetApp Console 시스템 페이지에서 FSx for ONTAP 시스템을 만들고 검색하고 System Manager와 기타 NetApp 서비스를 사용할 수 있습니다.  Amazon FSx for NetApp ONTAP for ONTAP 시스템 및 워크로드를 관리하려면 다음을 사용하세요. https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp Workload Factory"^] .
@@ -38,6 +40,7 @@ link:../use/task-create-fsx-system.html["NetApp Console 에서 FSx for ONTAP 시
 
 
 
+[[features]]
 == 특징
 
 * 저장 장치, 소프트웨어 또는 백업을 구성하거나 관리할 필요가 없습니다.
@@ -49,6 +52,7 @@ link:../use/task-create-fsx-system.html["NetApp Console 에서 FSx for ONTAP 시
 
 
 
+[[additional-features-in-netapp-console]]
 == NetApp Console 의 추가 기능
 
 * FSx for ONTAP NetApp Console _표준_ 모드로 사용할 때 지원되며, 이는 NetApp Console SaaS 계층을 활용하여 모든 기능을 제공합니다.  _제한_ 모드와 _비공개_ 모드는 지원되지 않습니다.
@@ -63,6 +67,7 @@ link:../use/task-create-fsx-system.html["NetApp Console 에서 FSx for ONTAP 시
 
 
 
+[[console-agents-and-links-unlock-all-fsx-for-ontap-features]]
 == 콘솔 에이전트 및 링크는 모든 FSx for ONTAP 기능을 잠금 해제합니다.
 
 콘솔 에이전트와 링크는 NetApp Console 과 Amazon FSx for NetApp ONTAP 작업 환경 간의 연결과 신뢰 관계를 구축합니다.  콘솔 에이전트는 클라우드 또는 온프레미스 네트워크에서 실행되는 NetApp 소프트웨어이며, 링크는 AWS Lambda를 사용하여 NetApp 코드를 실행합니다.  콘솔에서 시작하거나 FSx for ONTAP 시스템을 생성하려면 콘솔 에이전트나 링크가 필요하지 않지만, FSx for ONTAP 기능을 최대한 활용하려면 콘솔 에이전트나 링크를 사용해야 합니다.
@@ -90,6 +95,7 @@ link:../use/task-create-fsx-system.html["NetApp Console 에서 FSx for ONTAP 시
 
 
 
+[[cost]]
 == 비용
 
 FSx for ONTAP 계정은 NetApp 아닌 AWS에서 관리합니다. 참조하다 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSx for NetApp ONTAP 시작 가이드"^] .
@@ -98,12 +104,14 @@ AWS의 콘솔 에이전트나 링크를 사용하는 경우, NetApp Data Classif
 
 
 
+[[supported-regions]]
 == 지원되는 지역
 
 https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["지원되는 Amazon 지역을 확인하세요."^]
 
 
 
+[[getting-help]]
 == 도움 받기
 
 Amazon FSx for NetApp ONTAP 은 AWS의 자체 솔루션입니다.  FSx for ONTAP 파일 시스템, 인프라 또는 이 서비스를 사용하는 솔루션과 관련된 질문이나 기술 지원 문제가 있는 경우 AWS Management Console의 지원 센터를 사용하여 AWS에 지원 사례를 개설하세요.  "FSx for ONTAP" 서비스와 적절한 카테고리를 선택하세요.  AWS 지원 사례를 생성하는 데 필요한 나머지 정보를 제공하세요.

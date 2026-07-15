@@ -460,7 +460,6 @@
   <block id="ce269f36061333cca0642955f85d7893" category="paragraph"><block ref="ce269f36061333cca0642955f85d7893" category="inline-link-macro-rx"></block></block>
   <block id="9793db8d97a651febf9f052b60487a84" category="list-text">복제 생성 페이지에서 복제할 소스 볼륨을 선택한 후 *다음*을 클릭합니다.</block>
   <block id="5bc67df36eab9c2f7b3c55d3f683100e" category="list-text">복제 대상에서 다음을 제공합니다.</block>
-  <block id="562c87a680d962135f8e44bc0d159259" category="list-text">*저장소 VM 이름*: 드롭다운 메뉴에서 저장 VM을 선택합니다.  선택한 스토리지 VM은 이 복제 관계에서 선택한 모든 볼륨의 대상입니다.</block>
   <block id="56aeb18822215ccd01a9293a40c3b44a" category="list-text">*볼륨 이름*: 대상 볼륨 이름은 다음 형식으로 자동 생성됩니다.<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block> .  자동 생성된 볼륨 이름을 사용하거나 다른 볼륨 이름을 입력할 수 있습니다.</block>
   <block id="d3de0d39919d3426b0b013a4457e21ff" category="list-text">*사용 사례*: 복제에 대한 다음 사용 사례 중 하나를 선택하세요.  선택한 사용 사례에 따라 Workload Factory는 모범 사례에 따라 권장 값으로 양식을 채웁니다.  권장되는 값을 수락하거나 양식을 작성하면서 변경할 수 있습니다.</block>
   <block id="257ce4bae137964f3625a1e1d6f1369b" category="list-text">마이그레이션: 데이터를 대상 FSx for ONTAP 파일 시스템으로 전송합니다.</block>
@@ -485,8 +484,6 @@
   <block id="3fa74f1d72fd1aab6c47bb2b48e47218" category="list-text">*장기 보존*: 선택적으로 장기 보존을 위해 스냅샷을 활성화합니다.  장기 보존을 통해 사이트 전체에 장애가 발생하더라도 비즈니스 서비스는 계속 운영될 수 있으며, 보조 사본을 사용하여 애플리케이션이 투명하게 장애 조치되도록 지원합니다.</block>
   <block id="70fc7bb591b365ee183f47900503df43" category="paragraph">장기 보존이 없는 복제는 _MirrorAllSnapshots_ 정책을 사용합니다.  장기 보존을 활성화하면 _MirrorAndVault_ 정책이 복제에 할당됩니다.</block>
   <block id="7f5d1f7be42587a8d5bb2f5b6098ce8c" category="paragraph">장기 보존을 활성화하는 경우 기존 정책을 선택하거나 새 정책을 만들어 복제할 스냅샷과 보존할 스냅샷 수를 정의합니다.</block>
-  <block id="079c30a70413acebb5440fd932a014ad" category="admonition">장기 보존을 위해서는 소스와 타겟 라벨이 일치해야 합니다.  원하시면 Workload Factory에서 누락된 레이블을 생성해 드릴 수 있습니다.</block>
-  <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">*기존 정책 선택*: 드롭다운 메뉴에서 기존 정책을 선택하세요.</block>
   <block id="fca40712560cec2d2b7a47110cfecda1" category="list-text">*새 정책 만들기*: *정책 이름*을 입력하세요.</block>
   <block id="0546ab198c101c424e412d1355272bcd" category="list-text">*변경 불가능한 스냅샷*: 선택 사항.  보존 기간 동안 이 정책에서 생성된 스냅샷이 삭제되는 것을 방지하려면 *변경 불가능한 스냅샷 사용*을 선택합니다.</block>
   <block id="4e41f89501d754d5c6885a51e74ac5f0" category="list-text">*보존 기간*을 시간, 일, 월 또는 년 단위로 설정합니다.</block>
@@ -732,7 +729,6 @@
   <block id="b3b30d7a6ed8c780ecba9bd7ce8c2400" category="list-text">FSx for ONTAP과 온프레미스 ONTAP 또는 Cloud Volumes ONTAP 간에 데이터를 복제하려면 파일 시스템에 링크를 연결해야 합니다. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. 링크를 연결한 후 이 작업으로 돌아오십시오.</block>
   <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">온프레미스 ONTAP 시스템에서 FSx for ONTAP 파일 시스템으로 복제하려면 온프레미스 ONTAP 시스템을 검색했는지 확인하십시오.</block>
   <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">마이그레이션 사용 사례의 경우 스토리지 VM 데이터 및 구성 설정과의 복제 관계를 생성하기 전에 볼륨에 대한 마지막 복제가 지난 24시간 이내에 완료되었는지 확인하십시오.</block>
-  <block id="876ae080bad2795906c16db5a7bfc488" category="paragraph">*스토리지 VM 구성 복제*: 선택적으로 단일 스토리지 VM의 스토리지 VM 데이터 및 구성 설정을 복제하도록 선택합니다. 데이터와 구성 설정을 동시에 마이그레이션할 경우 지난 24시간 이내에 볼륨에 대한 마지막 복제가 완료되었는지 확인하십시오. 이 기능을 사용하려면 동일한 스토리지 VM에 있는 모든 볼륨을 선택해야 합니다. 모든 볼륨의 계층화 정책은 기본적으로 소스 볼륨의 계층화 정책으로 설정되며, 이는 마이그레이션 사용 사례에 권장됩니다.</block>
   <block id="5ef8b0a1c66a4b2210971848d2ce9752" category="paragraph">복제 관계는 타겟 FSx for ONTAP 파일 시스템의 *복제 관계* 탭에 나타납니다.</block>
   <block id="41ad46bbff5ae50ffe14d0bdc1b66775" category="paragraph">마이그레이션을 위해 복제 관계를 생성한 경우 스토리지 VM 데이터 및 구성 설정을 타겟 FSx for ONTAP 파일 시스템으로 마이그레이션하려면 모든 볼륨과 해당 스토리지 VM을 컷오버해야 합니다.</block>
   <block id="f2ce5ba0f770aa8ae822f79404813d99" category="section-title">마이그레이션 사용 사례를 위한 컷오버 복제</block>
@@ -827,4 +823,17 @@
   <block id="7ccf7420ef554de52729730c921b7ed6" category="paragraph"><block ref="7ccf7420ef554de52729730c921b7ed6" category="inline-link-rx"></block></block>
   <block id="0ce459c51e344ed42fa3a4c5e5211577" category="list-text"><block ref="0ce459c51e344ed42fa3a4c5e5211577" category="inline-link-macro-rx"></block></block>
   <block id="806a2b7e18f65da5e9f4288ad8e420ae" category="paragraph">소스(읽기/쓰기) 볼륨 하나 또는 데이터 보호(DP) 볼륨 하나를 복제할 수 있습니다. 계단식 복제는 지원되지만 세 번째 홉은 지원되지 않습니다. <block ref="0c64701c212ba4f059a9983b3d2a4857" category="inline-link-macro-rx"></block>에 대해 자세히 알아보십시오.</block>
+  <block id="7c33460ede710e45d063c1062b0cacba" category="doc">NetApp Console의 워크로드에서 GenAI 워크로드 제거</block>
+  <block id="ef8dda25d49364e8cb6cea8ce87a605c" category="paragraph">NetApp Console의 워크로드에서 GenAI 워크로드가 제거되었습니다.</block>
+  <block id="6fbe09b3d9705d922f633d5654393f36" category="paragraph">*스토리지 VM 구성 복제*: 선택적으로 단일 스토리지 VM의 데이터 및 구성 설정을 복제할 수 있습니다. 데이터 및 설정을 마이그레이션할 때 모든 볼륨은 지난 24시간 이내에 복제가 완료된 후 동시에 전환되어야 합니다.</block>
+  <block id="d5b5dacfafad754125a1766d22142ae9" category="paragraph">모든 볼륨의 계층화 정책은 기본적으로 소스 볼륨의 계층화 정책을 따르며, 이는 마이그레이션 사용 사례에 권장됩니다.</block>
+  <block id="21c415465773e849068dc431e13446de" category="paragraph">마이그레이션 중에는 클라이언트가 소스 ONTAP 파일 시스템의 데이터에 액세스합니다. 전환 후에는 타겟 FSx for ONTAP 파일 시스템 IP 주소를 통해 볼륨을 사용할 수 있습니다. 이전 IP 주소를 계속 사용하는 클라이언트 또는 리소스를 업데이트하십시오.</block>
+  <block id="5d7672a9b59eb24aba87a27c8bbec3cf" category="list-text">*스토리지 VM 이름*: 스토리지 VM을 선택합니다. 선택한 스토리지 VM은 이 복제 관계에서 선택한 모든 볼륨의 타겟이 됩니다.</block>
+  <block id="6a61ae33311b14370f4dc27907232bd8" category="paragraph">소스 및 대상 스토리지 VM 이름이 동일한 경우 피어링 충돌을 방지하기 위해 대상 스토리지 VM 이름에 대한 파일 시스템 별칭을 생성합니다.</block>
+  <block id="e9712999f0fba60273338ec00996f750" category="list-text">*복제 관계 초기화*: 복제 관계 생성 직후 또는 나중에 복제 관계를 초기화할지 선택합니다. 초기화에는 시간이 걸릴 수 있으므로 사용량이 적은 시간대에 기본 전송을 실행하는 것이 좋습니다.</block>
+  <block id="c881c341babc8c1d5988377bf0380590" category="paragraph">나중에 수동으로 초기화하려면 <block ref="588943a82f15abe65d3587b81de5b7ab" category="inline-xref-macro-rx"></block>의 지침을 참조하십시오.</block>
+  <block id="fabdd77b146b0b5f04616afb10561fb8" category="admonition">장기 보존을 위해서는 소스 레이블과 대상 레이블이 일치해야 합니다. 필요한 경우 Workload Factory에서 누락된 레이블을 생성할 수 있습니다.</block>
+  <block id="015e6ecffa9ac033df81ffa6004a8511" category="list-text">*기존 정책 선택*: 기존 정책을 선택합니다.</block>
+  <block id="593b7503b2bb0ab3939f80c599e28d01" category="section-title">2026년 7월 15일</block>
+  <block id="911a94d5dfd3459887baca73e6590302" category="paragraph">해결되지 않은 지시문 &lt;stdin&gt; - include::.._whatsnew/2026-07-15.adoc[]</block>
 </blocks>

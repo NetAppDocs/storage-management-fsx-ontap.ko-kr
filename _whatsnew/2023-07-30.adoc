@@ -4,6 +4,7 @@
 
 
 
+[[support-for-three-additional-regions]]
 === 3개의 추가 지역 지원
 
 이제 고객은 유럽(취리히), 유럽(스페인), 아시아 태평양(하이데라바드)의 세 개의 새로운 AWS 지역에서 Amazon FSx for NetApp ONTAP 파일 시스템을 만들 수 있습니다.

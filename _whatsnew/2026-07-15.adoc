@@ -1,0 +1,10 @@
+= NetApp Console의 워크로드에서 GenAI 워크로드 제거
+:allow-uri-read: 
+
+
+
+
+[[genai-workload-removal-from-workloads-in-the-netapp-console]]
+=== NetApp Console의 워크로드에서 GenAI 워크로드 제거
+
+NetApp Console의 워크로드에서 GenAI 워크로드가 제거되었습니다.
